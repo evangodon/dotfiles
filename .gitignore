@@ -3,12 +3,16 @@
 
 !*/
 
-*/**
+# */*
 
 # Files to not ignore
 !/.gitignore
 !Hyper/.hyper.js
+
 !Code/User/settings.json
 
 # Folder to not ignore
 !/fish/
+
+
+yarn/

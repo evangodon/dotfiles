@@ -1,0 +1,122 @@
+{
+  "beautify.language": {
+    "html": ["django-html"]
+  },
+  "editor.fontSize": 18,
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "vscode-icons",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 16,
+  "window.newWindowDimensions": "maximized",
+  "terminal.integrated.shell.windows": "C:\\Cmder\\vendor\\git-for-windows\\bin\\bash.exe",
+  "files.associations": {
+    "*.js": "javascript",
+    "*.css": "css",
+    "**/templates/*.html": "django-html",
+    "**/templates/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "*.py": "python",
+    "*.html": "html",
+    "*.txt": "plaintext"
+  },
+  "editor.colorDecorators": false,
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.matchBrackets": false,
+  "[css]": {},
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "django-html": "html"
+  },
+  "vim.handleKeys": {
+    "<C-d>": false,
+    "<D-w>": false,
+    "<C-k-w>": false,
+    "<C-/>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-f>": false,
+    "<C-w>": false
+  },
+  "color-highlight.markerType": "dot-before",
+  "css.validate": false,
+  "window.zoomLevel": 0,
+  "editor.snippetSuggestions": "top",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "gitlens.keymap": "chorded",
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "sync.gist": "274d311a1fffd46368db887347e6f44f",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.forceDownload": false,
+  "workbench.colorCustomizations": {
+    "[Material Theme Darker]": {
+      "window.activeBorder": "#ff0000"
+    },
+    "[Cyberpunk]": {
+      "window.activeBorder": "#00FF9C",
+      "titleBar.activeBackground": "#261D45",
+      "titleBar.inactiveBackground": "#261D45"
+    },
+    "statusBar.background": "#5f0000",
+    "statusBar.noFolderBackground": "#5f0000",
+    "statusBar.debuggingBackground": "#5f0000"
+  },
+  "breadcrumbs.enabled": true,
+  "explorer.confirmDelete": false,
+  "window.menuBarVisibility": "hidden",
+  "eslint.alwaysShowStatus": true,
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsicons.projectDetection.autoReload": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "terminal.integrated.rendererType": "dom",
+  "python.jediEnabled": false,
+  "[django-html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "diffEditor.renderSideBySide": false,
+  "editor.minimap.enabled": false,
+  "prettier.packageManager": "yarn",
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "vim.statusBarColorControl": true,
+  "workbench.colorTheme": "Cyberpunk",
+  "window.titleBarStyle": "custom"
+}

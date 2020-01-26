@@ -1,3 +1,5 @@
+# https://jasonstitt.com/gitignore-whitelisting-patterns
+
 # Ignore everything in repository root 
 *
 !*/

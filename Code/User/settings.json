@@ -42,7 +42,7 @@
   },
   "color-highlight.markerType": "dot-before",
   "css.validate": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "editor.snippetSuggestions": "top",
   "liveServer.settings.donotShowInfoMsg": true,
   "gitlens.keymap": "chorded",
@@ -68,9 +68,9 @@
       "titleBar.activeBackground": "#261D45",
       "titleBar.inactiveBackground": "#261D45"
     },
-    "statusBar.background": "#5f0000",
-    "statusBar.noFolderBackground": "#5f0000",
-    "statusBar.debuggingBackground": "#5f0000"
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
   },
   "breadcrumbs.enabled": true,
   "explorer.confirmDelete": false,

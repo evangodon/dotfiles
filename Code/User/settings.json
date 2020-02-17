@@ -5,7 +5,7 @@
   "editor.fontSize": 18,
   "editor.fontFamily": "Fira Code Retina",
   "editor.fontLigatures": true,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "eq-material-theme-icons-light",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
   "window.newWindowDimensions": "maximized",
@@ -24,6 +24,7 @@
   "files.eol": "\n",
   "editor.tabSize": 2,
   "editor.matchBrackets": false,
+  "editor.lineNumbers": "relative",
   "[css]": {},
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
@@ -34,12 +35,20 @@
     "<C-d>": false,
     "<D-w>": false,
     "<C-k-w>": false,
+    "<C-e>": false,
     "<C-/>": false,
     "<C-c>": false,
     "<C-v>": false,
     "<C-f>": false,
     "<C-w>": false
   },
+  "vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }
+  ],
+  "vim.easymotion": true,
   "color-highlight.markerType": "dot-before",
   "css.validate": false,
   "window.zoomLevel": -1,
@@ -65,6 +74,7 @@
     },
     "[Cyberpunk]": {
       "window.activeBorder": "#00FF9C",
+      "editorLineNumber.foreground": "#00d481",
       "titleBar.activeBackground": "#261D45",
       "titleBar.inactiveBackground": "#261D45"
     },
@@ -117,6 +127,8 @@
   "prettier.singleQuote": true,
   "workbench.editor.highlightModifiedTabs": true,
   "vim.statusBarColorControl": true,
+  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Cyberpunk",
-  "window.titleBarStyle": "custom"
+  "glassit-linux.opacity": 97,
+  "powermode.enabled": true
 }

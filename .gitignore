@@ -12,6 +12,7 @@
 
 # Folder to not ignore
 !/fish/
+!/nvim/*
 
 
 # Folders to ignore

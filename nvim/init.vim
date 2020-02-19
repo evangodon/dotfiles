@@ -1,11 +1,19 @@
+"
+" Useful commands:
+" :so % - reload config
+"
+"
+"
 " ### Plugins
 call plug#begin()
 
 " Color Schemes
 Plug 'dikiaap/minimalist'
 Plug 'joshdick/onedark.vim'
+Plug 'bluz71/vim-nightfly-guicolors'
 
 " JavaScript
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -20,12 +28,33 @@ Plug 'vim-airline/vim-airline-themes'
 " Startify
 Plug 'mhinz/vim-startify'
 
+" Wiki
+Plug 'vimwiki/vimwiki'
+
+" Nerd Commenter
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
 set t_Co=256
 syntax on
 colorscheme onedark
+
+" ### Plugin Config
+
+" For Nert Commenter
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>
+let g:NERDCustomDelimiters={
+	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+\}
+
+" For Vim wiki
+set nocompatible
+filetype plugin on
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
@@ -49,5 +78,15 @@ set number relativenumber "turn hybrid line numbers on
 
 " AirLine Config
 set noshowmode "hide insert status since I use airline
+let g:airline_theme='onedark'
 
 nmap <space>e :CocCommand explorer<CR>
+
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg "Hide that ~ thing for empty lines
+
+let mapleader = "\<Space>" " <leader>
+
+" Terminal  Mode
+tnoremap <Esc> <C-\><C-n>
+
+

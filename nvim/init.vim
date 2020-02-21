@@ -14,10 +14,12 @@ call plug#begin()
 Plug 'dikiaap/minimalist'
 Plug 'joshdick/onedark.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'bluz71/vim-nightfly-guicolors'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+"Plug 'HerringtonDarkholme/yats.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
@@ -44,6 +46,7 @@ call plug#end()
 
 set t_Co=256
 set encoding=UTF-8
+set termguicolors
 syntax on
 colorscheme onedark
 
@@ -89,7 +92,8 @@ let g:airline_theme='onedark'
 
 nmap <space>e :CocCommand explorer<CR>
 
-hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg "Hide that ~ thing for empty lines
+set background=dark
+highlight! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg "Hide that ~ thing for empty lines
 
 let mapleader = "\<Space>" " <leader>
 

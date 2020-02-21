@@ -12,8 +12,18 @@
 
 # Folder to not ignore
 !/fish/
+
+# Neovim
 !/nvim/*
 nvim/plugged
+nvim/.netrwhist
+
+# Kitty Terminal
+kitty/*
+
+# Ranger
+ranger/*
+
 
 
 # Folders to ignore

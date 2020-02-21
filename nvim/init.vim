@@ -3,6 +3,9 @@
 " :so % - reload config
 "
 "
+" Links:
+" https://github.com/aswathkk/dotfiles/blob/master/nvim/init.vim
+" https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode
 "
 " ### Plugins
 call plug#begin()
@@ -34,9 +37,13 @@ Plug 'vimwiki/vimwiki'
 " Nerd Commenter
 Plug 'preservim/nerdcommenter'
 
+" Devicons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 set t_Co=256
+set encoding=UTF-8
 syntax on
 colorscheme onedark
 

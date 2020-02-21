@@ -42,6 +42,9 @@ Plug 'preservim/nerdcommenter'
 " Devicons
 Plug 'ryanoasis/vim-devicons'
 
+" Move lines
+Plug 'matze/vim-move'
+
 call plug#end()
 
 set t_Co=256

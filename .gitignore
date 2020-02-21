@@ -19,10 +19,10 @@ nvim/plugged
 nvim/.netrwhist
 
 # Kitty Terminal
-kitty/*
+!kitty/*
 
 # Ranger
-ranger/*
+!ranger/*
 
 
 

@@ -1,5 +1,6 @@
 set PATH ~/.config/composer/vendor/bin $PATH
 set PATH $HOME/.cargo/bin $PATH
+set PATH /usr/local/go/bin $PATH 
 
 set fish_greeting ""
 

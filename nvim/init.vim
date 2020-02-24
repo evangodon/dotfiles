@@ -19,9 +19,11 @@ Plug 'bluz71/vim-nightfly-guicolors'
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-"Plug 'HerringtonDarkholme/yats.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -44,6 +46,9 @@ Plug 'ryanoasis/vim-devicons'
 
 " Move lines
 Plug 'matze/vim-move'
+
+" Auto Pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -92,15 +97,20 @@ set number relativenumber "turn hybrid line numbers on
 " AirLine Config
 set noshowmode "hide insert status since I use airline
 let g:airline_theme='onedark'
+let g:airline_powerline_fonts = 1
 
 nmap <space>e :CocCommand explorer<CR>
 
 set background=dark
 highlight! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg "Hide that ~ thing for empty lines
 
-let mapleader = "\<Space>" " <leader>
+let mapleader = "\<Space>" " set <leader>
 
 " Terminal  Mode
 tnoremap <Esc> <C-\><C-n>
+
+" Go Vim
+nmap <leader>gr :GoRun<CR>
+
 
 

@@ -24,6 +24,8 @@ nvim/.netrwhist
 # Ranger
 !ranger/*
 
+# Coc
+coc/*
 
 
 # Folders to ignore

@@ -30,3 +30,5 @@ coc/*
 
 # Folders to ignore
 yarn/
+
+!README.docs.md

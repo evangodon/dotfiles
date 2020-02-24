@@ -9,6 +9,7 @@
 !/.gitignore
 !Hyper/.hyper.js
 !Code/User/settings.json
+readme.md
 
 # Folder to not ignore
 !/fish/
@@ -31,4 +32,3 @@ coc/*
 # Folders to ignore
 yarn/
 
-!README.docs.md

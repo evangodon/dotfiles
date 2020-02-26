@@ -15,6 +15,7 @@ Plug 'dikiaap/minimalist'
 Plug 'joshdick/onedark.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'artanikin/vim-synthwave84'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
@@ -24,6 +25,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+nmap <leader>gr :GoRun<CR>
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,15 +33,28 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+set noshowmode "hide mode status since I use airline
+let g:airline_theme='onedark'
+let g:airline_powerline_fonts = 1
 
 " Startify
 Plug 'mhinz/vim-startify'
 
 " Wiki
 Plug 'vimwiki/vimwiki'
+set nocompatible
+filetype plugin on
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " Nerd Commenter
 Plug 'preservim/nerdcommenter'
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>
+let g:NERDCustomDelimiters={
+	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+\}
 
 " Devicons
 Plug 'ryanoasis/vim-devicons'
@@ -47,8 +62,17 @@ Plug 'ryanoasis/vim-devicons'
 " Move lines
 Plug 'matze/vim-move'
 
-" Auto Pairs
-Plug 'jiangmiao/auto-pairs'
+" Signify for Git
+Plug 'mhinz/vim-signify'
+
+" Goyo
+Plug 'junegunn/goyo.vim'
+
+" limelight
+Plug 'junegunn/limelight.vim'
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 call plug#end()
 
@@ -58,28 +82,14 @@ set termguicolors
 syntax on
 colorscheme onedark
 
-" ### Plugin Config
-
-" For Nert Commenter
-nmap <C-_>   <Plug>NERDCommenterToggle
-vmap <C-_>   <Plug>NERDCommenterToggle<CR>
-let g:NERDCustomDelimiters={
-	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-\}
-
-" For Vim wiki
-set nocompatible
-filetype plugin on
-
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 " Setup Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+
+" General settings
 set autoindent " always set autoindenting on
 set copyindent " copy the previous indentation on autoindenting
 set expandtab " expand tabs by default (overloadable per file type)
@@ -94,11 +104,6 @@ set tabstop=2 " tabs are n spaces
 
 set number relativenumber "turn hybrid line numbers on
 
-" AirLine Config
-set noshowmode "hide insert status since I use airline
-let g:airline_theme='onedark'
-let g:airline_powerline_fonts = 1
-
 nmap <space>e :CocCommand explorer<CR>
 
 set background=dark
@@ -109,8 +114,6 @@ let mapleader = "\<Space>" " set <leader>
 " Terminal  Mode
 tnoremap <Esc> <C-\><C-n>
 
-" Go Vim
-nmap <leader>gr :GoRun<CR>
 
 
 

@@ -9,3 +9,6 @@
 - [ ] Fix padding with Kitty terminal
 - [ ] Make nvim default editor of ranger
 - [ ] Get dev icons working
+
+
+init.vim

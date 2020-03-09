@@ -26,13 +26,11 @@ nvim/.netrwhist
 # Ranger
 !ranger/*
 
-# Coc
-!coc/*
-
 # Awesome WM
 !awesome/*
 
 
 # Folders to ignore
 yarn/
+coc/
 

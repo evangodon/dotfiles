@@ -27,7 +27,10 @@ nvim/.netrwhist
 !ranger/*
 
 # Coc
-coc/*
+!coc/*
+
+# Awesome WM
+!awesome/*
 
 
 # Folders to ignore

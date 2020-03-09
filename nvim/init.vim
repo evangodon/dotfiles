@@ -25,7 +25,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-nmap <leader>gr :GoRun<CR>
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -33,28 +32,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-set noshowmode "hide mode status since I use airline
-let g:airline_theme='onedark'
-let g:airline_powerline_fonts = 1
 
 " Startify
 Plug 'mhinz/vim-startify'
 
 " Wiki
 Plug 'vimwiki/vimwiki'
-set nocompatible
-filetype plugin on
-
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " Nerd Commenter
 Plug 'preservim/nerdcommenter'
-nmap <C-_>   <Plug>NERDCommenterToggle
-vmap <C-_>   <Plug>NERDCommenterToggle<CR>
-let g:NERDCustomDelimiters={
-	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-\}
 
 " Devicons
 Plug 'ryanoasis/vim-devicons'
@@ -104,16 +90,49 @@ set tabstop=2 " tabs are n spaces
 
 set number relativenumber "turn hybrid line numbers on
 
-nmap <space>e :CocCommand explorer<CR>
+" When going up or down one line, use displayed lines instead of physical lines
+noremap silent! <silent> k gk
+noremap silent! <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$
+
+nnoremap <space>e :CocCommand explorer<CR>
 
 set background=dark
 highlight! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg "Hide that ~ thing for empty lines
 
-let mapleader = "\<Space>" " set <leader>
+nnoremap <silent> <C-N> :bnext<CR>
+nnoremap <silent> <C-P> :bprev<CR>
+
+" Airline
+set noshowmode "hide mode status since I use airline
+let g:airline_theme='onedark'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#coc#enabled = 1
+
+" Vim Wiki
+set nocompatible
+filetype plugin on
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" Nerd Commenter
+nnoremap <C-_>   <Plug>NERDCommenterToggle
+vnoremap <C-_>   <Plug>NERDCommenterToggle<CR>
+let g:NERDCustomDelimiters={
+	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+\}
+
+" set <leader>
+let mapleader = "\<Space>" 
 
 " Terminal  Mode
 tnoremap <Esc> <C-\><C-n>
 
+" Vim Go
+nnoremap <leader>gr :write <bar> :GoRun<CR>
 
 
 

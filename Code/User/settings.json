@@ -44,8 +44,8 @@
   },
   "vim.insertModeKeyBindings": [
     {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.easymotion": true,
@@ -74,7 +74,6 @@
     },
     "[Cyberpunk]": {
       "window.activeBorder": "#00FF9C",
-      "editorLineNumber.foreground": "#00d481",
       "titleBar.activeBackground": "#261D45",
       "titleBar.inactiveBackground": "#261D45"
     },
@@ -129,6 +128,5 @@
   "vim.statusBarColorControl": true,
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Cyberpunk",
-  "glassit-linux.opacity": 97,
   "powermode.enabled": true
 }

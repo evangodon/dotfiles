@@ -6,7 +6,8 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "json"
+    "json",
+    "go"
   ],
   "suggest.minTriggerInputLength": 4
 }

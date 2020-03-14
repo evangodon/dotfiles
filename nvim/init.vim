@@ -132,7 +132,12 @@ let mapleader = "\<Space>"
 tnoremap <Esc> <C-\><C-n>
 
 " Vim Go
-nnoremap <leader>gr :write <bar> :GoRun<CR>
+nnoremap <silent> <leader> gr :write <bar> :GoRun<CR>
+
+" Map control-s to write
+noremap  <silent> <C-S>  :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
 
 
 

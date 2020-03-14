@@ -76,10 +76,7 @@
       "window.activeBorder": "#00FF9C",
       "titleBar.activeBackground": "#261D45",
       "titleBar.inactiveBackground": "#261D45"
-    },
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f"
+    }
   },
   "breadcrumbs.enabled": true,
   "explorer.confirmDelete": false,
@@ -125,8 +122,7 @@
   "prettier.trailingComma": "es5",
   "prettier.singleQuote": true,
   "workbench.editor.highlightModifiedTabs": true,
-  "vim.statusBarColorControl": true,
+  "vim.statusBarColorControl": false,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Cyberpunk",
-  "powermode.enabled": true
+  "workbench.colorTheme": "Solarized Light"
 }

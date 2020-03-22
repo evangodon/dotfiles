@@ -30,6 +30,7 @@ nvim/.netrwhist
 !awsome/.git
 
 !rofi/*
+!rofi/**/*
 
 
 # Folders to ignore

@@ -8,7 +8,6 @@
 # Files to not ignore
 !/.gitignore
 !Hyper/.hyper.js
-!Code/User/settings.json
 readme.md
 
 # Folder to not ignore
@@ -29,6 +28,8 @@ nvim/.netrwhist
 # Awesome WM
 !awesome/*
 !awsome/.git
+
+!rofi/*
 
 
 # Folders to ignore

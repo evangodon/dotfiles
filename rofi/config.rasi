@@ -1,0 +1,7 @@
+/** Configured For Applets **/
+
+configuration {
+  show-icons: true;
+  location: 0;
+  dpi: 192;
+}

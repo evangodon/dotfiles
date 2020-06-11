@@ -39,9 +39,6 @@ Plug 'mhinz/vim-startify'
 " Wiki
 Plug 'vimwiki/vimwiki'
 
-" Nerd Commenter
-Plug 'preservim/nerdcommenter'
-
 " Devicons
 Plug 'ryanoasis/vim-devicons'
 
@@ -56,6 +53,11 @@ Plug 'junegunn/goyo.vim'
 
 " limelight
 Plug 'junegunn/limelight.vim'
+
+if !exists('g:vscode')
+  " Nerd Commenter
+  Plug 'preservim/nerdcommenter'
+endif
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
@@ -88,7 +90,7 @@ set smarttab " insert tabs on the start of a line according to shiftwidth, not t
 set softtabstop=2 " when hitting <BS>, pretend like a tab is removed, even if spaces
 set tabstop=2 " tabs are n spaces
 
-set number relativenumber "turn hybrid line numbers on
+set number "turn hybrid line numbers on
 
 " When going up or down one line, use displayed lines instead of physical lines
 noremap silent! <silent> k gk
@@ -115,15 +117,16 @@ let g:airline#extensions#coc#enabled = 1
 set nocompatible
 filetype plugin on
 
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
+let g:vimwiki_list = [{'path': '~/work/notes', 'syntax': 'markdown', 'ext': '.md'}]
+  
+if !exists('g:vscode')
 " Nerd Commenter
-nnoremap <C-_>   <Plug>NERDCommenterToggle
-vnoremap <C-_>   <Plug>NERDCommenterToggle<CR>
-let g:NERDCustomDelimiters={
-	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-\}
+  nnoremap <C-_>   <Plug>NERDCommenterToggle
+  vnoremap <C-_>   <Plug>NERDCommenterToggle<CR>
+  let g:NERDCustomDelimiters={
+	  \ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+  \}
+endif
 
 " set <leader>
 let mapleader = "\<Space>" 

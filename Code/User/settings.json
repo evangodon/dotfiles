@@ -5,7 +5,7 @@
   "editor.fontSize": 18,
   "editor.fontFamily": "Fira Code Retina",
   "editor.fontLigatures": true,
-  "workbench.iconTheme": "eq-material-theme-icons-light",
+  "workbench.iconTheme": "vscode-icons",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
   "window.newWindowDimensions": "maximized",
@@ -18,13 +18,14 @@
     "**/requirements{/**,*}.{txt,in}": "pip-requirements",
     "*.py": "python",
     "*.html": "html",
-    "*.txt": "plaintext"
+    "*.txt": "plaintext",
+    "*.rasi": "css"
   },
   "editor.colorDecorators": false,
   "files.eol": "\n",
   "editor.tabSize": 2,
-  "editor.matchBrackets": false,
-  "editor.lineNumbers": "relative",
+  "editor.matchBrackets": "never",
+  "editor.renderWhitespace": "none",
   "[css]": {},
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
@@ -62,7 +63,6 @@
   },
   "sync.gist": "274d311a1fffd46368db887347e6f44f",
   "sync.quietSync": false,
-  "sync.askGistName": false,
   "sync.removeExtensions": true,
   "sync.syncExtensions": true,
   "sync.autoDownload": false,
@@ -124,5 +124,10 @@
   "workbench.editor.highlightModifiedTabs": true,
   "vim.statusBarColorControl": false,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "September Steel"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Solarized Light",
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "vscode-neovim.neovimPath": "/snap/bin/nvim",
+  "vscode-neovim.useCtrlKeysForNormalMode": false
 }

@@ -1,3 +1,8 @@
+---
+type: Journal
+modified: 2020-06-14T12:29:01-04:00
+---
+
 # Things to do and fix
 
 - [x] Prettier on save

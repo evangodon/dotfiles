@@ -67,6 +67,7 @@ call plug#end()
 set t_Co=256
 set encoding=UTF-8
 set termguicolors
+set nowrap
 syntax on
 colorscheme onedark
 
@@ -83,6 +84,7 @@ set copyindent " copy the previous indentation on autoindenting
 set expandtab " expand tabs by default (overloadable per file type)
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=2 " number of spaces to use for autoindenting
+set colorcolumn=90
 
 set smartindent
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop

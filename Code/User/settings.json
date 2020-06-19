@@ -50,7 +50,8 @@
     }
   ],
   "vim.easymotion": true,
-  "color-highlight.markerType": "dot-before",
+  "color-highlight.markerType": "background",
+  "color-highlight.markRuler": false,
   "css.validate": false,
   "window.zoomLevel": -1,
   "editor.snippetSuggestions": "top",
@@ -129,5 +130,6 @@
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "vscode-neovim.neovimPath": "/snap/bin/nvim",
-  "vscode-neovim.useCtrlKeysForNormalMode": false
+  "vscode-neovim.useCtrlKeysForNormalMode": false,
+  "editor.suggest.showColors": false
 }

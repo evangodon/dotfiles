@@ -1,5 +1,12 @@
+" auto-install vim-plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  "autocmd VimEnter * PlugInstall
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-" ### Plugins
+
 call plug#begin()
 
   " Color Schemes
@@ -8,6 +15,7 @@ call plug#begin()
   Plug 'bluz71/vim-nightfly-guicolors'
   Plug 'bluz71/vim-nightfly-guicolors'
   Plug 'artanikin/vim-synthwave84'
+  Plug 'ghifarit53/tokyonight.vim'
   
   " JavaScript
   Plug 'pangloss/vim-javascript'
@@ -53,6 +61,9 @@ call plug#begin()
 
   "Buftabline
   Plug 'ap/vim-buftabline'
+
+  " Colorizer
+  Plug 'norcalli/nvim-colorizer.lua'
 
 call plug#end()
 

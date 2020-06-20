@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/evan/.config/nvim'
 let g:netrw_dirhist_7='/home/evan/Documents/Knowledge Base/Code'
 let g:netrw_dirhist_6='/home/evan/Documents/Knowledge Base'
 let g:netrw_dirhist_5='/home/evan/Documents/Knowledge Base/Linux'

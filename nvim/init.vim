@@ -18,6 +18,7 @@ source $HOME/.config/nvim/plug-config/coc-explorer.vim
 source $HOME/.config/nvim/plug-config/vim-wiki.vim
 source $HOME/.config/nvim/plug-config/nerd-commenter.vim
 source $HOME/.config/nvim/plug-config/vim-go.vim
+source $HOME/.config/nvim/plug-config/nvim-colorizer.vim
 
   
 

@@ -65,6 +65,22 @@ call plug#begin()
   " Colorizer
   Plug 'norcalli/nvim-colorizer.lua'
 
+  " Ranger
+  Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+  " fzf
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'"
+
+  " router
+  Plug 'airblade/vim-rooter'
+
 call plug#end()
 
+
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 

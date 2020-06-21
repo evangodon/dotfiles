@@ -75,6 +75,9 @@ call plug#begin()
   " router
   Plug 'airblade/vim-rooter'
 
+  " Table Mode
+  Plug 'dhruvasagar/vim-table-mode'
+
 call plug#end()
 
 

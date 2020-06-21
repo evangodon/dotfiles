@@ -45,6 +45,7 @@ let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
 let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
+let g:which_key_map['tm'] = [ ':TableModeToggle'                       , 'toggle table mode' ]
 " Need to add theses
 "let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 "let g:which_key_map['c'] = [ ':Codi!!'                    , 'virtual repl']

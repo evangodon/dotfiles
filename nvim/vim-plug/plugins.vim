@@ -78,6 +78,9 @@ call plug#begin()
   " Table Mode
   Plug 'dhruvasagar/vim-table-mode'
 
+  " Quickscope
+  Plug 'unblevable/quick-scope'
+
 call plug#end()
 
 

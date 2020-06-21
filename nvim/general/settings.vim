@@ -39,7 +39,6 @@ set smarttab " insert tabs on the start of a line according to shiftwidth, not t
 set softtabstop=2 " when hitting <BS>, pretend like a tab is removed, even if spaces
 set tabstop=2 " tabs are n spaces
 
-set number "turn hybrid line numbers on
 
 " Hightlight the current line
 set cursorline
@@ -47,3 +46,25 @@ hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
+
+" line numbers
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" return to absolute line numbering when cursor leaves buffer/window/split
+augroup numbertoggle
+  autocmd!
+  autocmd BufLeave,WinLeave,FocusLost * set number
+augroup END
+
+
+" Hightlight yanked text
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 1500)
+augroup END

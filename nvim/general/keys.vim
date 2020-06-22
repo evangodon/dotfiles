@@ -1,3 +1,10 @@
+if exists('g:vscode')
+
+" Simulate same TAB behavior in VSCode
+nmap <Tab> :Tabnext<CR>
+nmap <S-Tab> :Tabprev<CR>
+
+else
 
 " set <leader>
 let mapleader = "\<Space>" 
@@ -12,6 +19,12 @@ noremap <silent> $ g$
 " Navigate buffers
 nnoremap <silent> <C-N> :bnext<CR>
 nnoremap <silent> <C-P> :bprev<CR>
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Terminal  Mode
 tnoremap <Esc> <C-\><C-n>
@@ -31,7 +44,13 @@ let g:which_key_map =  {}
 let g:which_key_sep = '→'
 set timeoutlen=500
 
-" Single mappings
+" Move selected line / block of text in visual mode
+" shift + k to move up
+" shift + j to move down
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
+
+" Whick key mappings 
 let g:which_key_map['.'] = [ ':e ~/.config/nvim'          , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
@@ -45,7 +64,7 @@ let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
 let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
-let g:which_key_map['tm'] = [ ':TableModeToggle'                       , 'toggle table mode' ]
+let g:which_key_map['tm'] = [ ':TableModeToggle'          , 'toggle table mode' ]
 " Need to add theses
 "let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 "let g:which_key_map['c'] = [ ':Codi!!'                    , 'virtual repl']
@@ -55,3 +74,5 @@ let g:which_key_map['tm'] = [ ':TableModeToggle'                       , 'toggle
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
+
+endif

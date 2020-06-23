@@ -130,6 +130,6 @@
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "vscode-neovim.neovimPath": "/snap/bin/nvim",
-  "vscode-neovim.useCtrlKeysForNormalMode": false,
-  "editor.suggest.showColors": false
+  "editor.suggest.showColors": true,
+  "vscode-neovim.useCtrlKeysForNormalMode": true
 }

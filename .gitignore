@@ -15,7 +15,7 @@ readme.md
 !/fish/functions/*
 
 # Neovim
-!/nvim/*
+!/nvim/**/*
 nvim/plugged
 nvim/.netrwhist
 

@@ -29,7 +29,7 @@ call plug#begin()
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
   " Golang
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
   " Coc
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -65,8 +65,8 @@ call plug#begin()
   Plug 'preservim/nerdcommenter'
 
   "Buftabline
-  Plug 'ap/vim-buftabline'
-
+  Plug 'pacha/vem-tabline'
+  
   " Colorizer
   Plug 'norcalli/nvim-colorizer.lua'
 
@@ -83,6 +83,18 @@ call plug#begin()
   " Table Mode
   Plug 'dhruvasagar/vim-table-mode'
 
+  " Float term
+  Plug 'voldikss/vim-floaterm'
+
+  "Experimental"
+  Plug 'mbbill/undotree'
+
+  Plug 'romgrk/todoist.vim', { 'do': ':TodoistInstall' }
+
+  "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
+  Plug 'justinmk/vim-dirvish'
+  Plug 'kristijanhusak/vim-dirvish-git'
 
 endif
 

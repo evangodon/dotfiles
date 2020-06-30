@@ -32,6 +32,9 @@ nvim/.netrwhist
 !rofi/*
 !rofi/**/*
 
+# jrnl
+!/jrnl/**/*
+
 
 # Folders to ignore
 yarn/

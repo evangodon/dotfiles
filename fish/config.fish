@@ -1,6 +1,7 @@
 set fish_greeting ""
 
-bind \co ranger-cd
+# Keyboard Shortcuts
+bind \co fzf
 
 starship init fish | source
 

@@ -16,13 +16,23 @@ SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/evan/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/evan/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:/home/evan
-SETUVAR --export __ABBR_TIPS_KEYS:\x2dg
-SETUVAR --export __ABBR_TIPS_VALUES:r\x20ranger
+SETUVAR --export __ABBR_TIPS_KEYS:\x2dg\x1egp\x1egc\x1er\x1ega\x1enfz\x1envims\x1egCd\x1eq\x1elg\x1edev
+SETUVAR --export __ABBR_TIPS_VALUES:r\x20ranger\x1e\x22git\x20pull\x22\x1e\x22git\x20checkout\x22\x1eranger\x1e\x22git\x20add\x20\x2e\x22\x1e\x22nvim\x20\x28fzf\x29\x22\x1e\x20\x27nvim\x20\x2b\x22source\x20Session\x2evim\x22\x27\x1e\x22git\x20checkout\x20develop\x22\x1eexit\x1elazygit\x1e\x22git\x20checkout\x20develop\x22
 SETUVAR --export __abbr_tips_run_once:1
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_dev:git\x20checkout\x20develop
+SETUVAR _fish_abbr_gCd:git\x20checkout\x20develop
+SETUVAR _fish_abbr_ga:git\x20add\x20\x2e
+SETUVAR _fish_abbr_gc:git\x20commit
+SETUVAR _fish_abbr_gp:git\x20pull
+SETUVAR _fish_abbr_lg:lazygit
+SETUVAR _fish_abbr_nfz:nvim\x20\x28fzf\x29
+SETUVAR _fish_abbr_nvims:nvim\x20\x2b\x22source\x20Session\x2evim\x22
+SETUVAR _fish_abbr_q:exit
+SETUVAR _fish_abbr_r:ranger
 SETUVAR echo:LD_LIBRARY_PATH\x1e/usr/lib
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr

@@ -13,6 +13,7 @@ journals:
   default: '~/work/lane-notes/jrnl/journal.txt'
   andy: '~/work/lane-notes/jrnl/one-on-one.txt'
   morning: '~/work/lane-notes/jrnl/morning.txt'
+  retro: '~/work/lane-notes/jrnl/retro.txt'
 linewrap: 79
 tagsymbols: '@'
 template: false 

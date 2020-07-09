@@ -14,22 +14,18 @@ call plug#begin()
 
   if exists('g:vscode')
   else
+
   " Color Schemes
-  Plug 'dikiaap/minimalist'
   Plug 'joshdick/onedark.vim'
-  Plug 'bluz71/vim-nightfly-guicolors'
-  Plug 'bluz71/vim-nightfly-guicolors'
-  Plug 'artanikin/vim-synthwave84'
   Plug 'ghifarit53/tokyonight.vim'
+  Plug 'junegunn/seoul256.vim'
+  Plug 'rakr/vim-one'
   
   " JavaScript
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
-  " Golang
-  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
   " Coc
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -48,9 +44,6 @@ call plug#begin()
 
   " Move lines
   Plug 'matze/vim-move'
-
-  " Signify for Git
-  Plug 'mhinz/vim-signify'
 
   " Goyo
   Plug 'junegunn/goyo.vim'
@@ -86,15 +79,28 @@ call plug#begin()
   " Float term
   Plug 'voldikss/vim-floaterm'
 
-  "Experimental"
+  "Firenvim"
+   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
+  " Undo tree"
   Plug 'mbbill/undotree'
 
+  " Obsession
+  Plug 'tpope/vim-obsession'
+
+  "Experimental"
   Plug 'romgrk/todoist.vim', { 'do': ':TodoistInstall' }
-
-  "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-
   Plug 'justinmk/vim-dirvish'
-  Plug 'kristijanhusak/vim-dirvish-git'
+
+  Plug 'michal-h21/vim-zettel'
+
+  Plug 'kshenoy/vim-signature'
+
+  Plug 'itchyny/calendar.vim'
+
+  Plug 'nvim-treesitter/nvim-treesitter'
+
+  Plug 'skbolton/embark'
 
 endif
 

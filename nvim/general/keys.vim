@@ -1,10 +1,11 @@
 if exists('g:vscode')
 
-  xnoremap <silent> <A> :<C-u>call <SID>openVSCodeCommandsInVisualMode()<CR>
-
   " Simulate same TAB behavior in VSCode
   nmap <Tab> :Tabnext<CR>
   nmap <S-Tab> :Tabprev<CR>
+
+  nmap <Space>bd :q<CR>
+  map <C-c>  y<CR>   
 
 else
 
@@ -24,11 +25,24 @@ else
   nnoremap <silent> <C-N> :bnext<CR>
   nnoremap <silent> <C-P> :bprev<CR>
 
-  " Better window navigation
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
-  nnoremap <C-l> <C-w>l
+  " Window navigation and easy create
+  function! WinMove(key)
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+        if (match(a:key,'[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd ".a:key
+    endif
+  endfunction
+
+  nnoremap <silent> <C-j> :call WinMove('j')<CR>
+  nnoremap <silent> <C-h> :call WinMove('h')<CR>
+  nnoremap <silent> <C-k> :call WinMove('k')<CR>
+  nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
   " Use alt + hjkl to resize windows
   nnoremap <silent> <M-j>    :resize -2<CR>
@@ -50,8 +64,6 @@ else
   vnoremap <silent> <C-S> <C-C>:update<CR>
   inoremap <silent> <C-S> <C-O>:update<CR>
 
-  " Mimic control-w from vscode
-  nnoremap <expr> <C-w> len(getbufinfo({'buflisted':1}))  == 1 ? ':q<cr>':':bd<cr>'
 
 
   " Map leader to which_key
@@ -94,35 +106,42 @@ else
 
   " Move selected line / block of text in visual mode
   " shift + k to move up
-  " shift + j to move down
+   "shift + j to move down
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
 
   " Toggle comment line
   nmap <C-_>   <Plug>NERDCommenterToggle
   vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+  " todo: need to fix this
+  nnoremap <leader>c   <Plug>NERDCommenterAltDelims<CR>
 
   " Fzf
   map <C-f> :Files<CR>
   nnoremap <leader>g :Rg<CR>
   nnoremap <leader>m :Marks<CR>
+  nnoremap <leader>q :q<CR>
+  nnoremap <leader><Enter> :FloatermToggle <CR>
+  nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
+  " Mimic control-w from vscode
+  nnoremap <expr> <leader>w len(getbufinfo({'buflisted':1}))  == 1 ? ':q<cr>':':bd<cr>'
 
   " Which key mappings 
   let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
   let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
-  let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
   let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
+  let g:which_key_map["'"] = [ ':Marks'                     , 'search marks' ]
   let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-  let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
+  let g:which_key_map['f'] = [ ':GFiles'                    , 'search files' ]
   let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'toggle ranger' ]
-  let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-  let g:which_key_map['q'] = [ ':q'                         , 'quit' ]
   let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
-  let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
   let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
   let g:which_key_map['T'] = [ ':Todoist'                   , 'search text' ]
   let g:which_key_map['u'] = [ ':UndotreeToggle'            , 'toggle undo tree' ]
+  let g:which_key_map['O'] = [ ':Obsess'                    , 'toggle obsession state' ]
+  let g:which_key_map['G'] = [ ':FloatermNew lazygit'       , 'open lazygit' ]
+  let g:which_key_map['C'] = [ ':Calendar -view=day'        , 'open day Calendar' ]
   let g:which_key_map['tm'] = [ ':TableModeToggle'          , 'toggle table mode' ]
 
 
@@ -140,8 +159,6 @@ else
   let g:which_key_map.t = {
         \ 'name' : '+terminal' ,
         \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
-        \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-        \ 'g' : [':FloatermNew lazygit'                           , 'git'],
         \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
         \ 'n' : [':FloatermNew node'                              , 'node'],
         \ 't' : [':FloatermToggle'                                , 'toggle'],

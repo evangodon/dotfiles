@@ -4,7 +4,6 @@
 "   |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "
 "
-"
 " Useful commands:
 " :so % - reload config
 "
@@ -36,5 +35,10 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/todoist.vim
 source $HOME/.config/nvim/plug-config/vem-tabline.vim
 source $HOME/.config/nvim/plug-config/firenvim.vim
+source $HOME/.config/nvim/plug-config/vim-zettel.vim
+source $HOME/.config/nvim/plug-config/calendar.vim
+source $HOME/.config/nvim/plug-config/tree-sitter.vim
 
 
+" Get Google Calendar credentials
+source $HOME/.cache/calendar.vim/credentials.vim

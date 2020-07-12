@@ -2,7 +2,6 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
@@ -20,6 +19,7 @@ call plug#begin()
   Plug 'ghifarit53/tokyonight.vim'
   Plug 'junegunn/seoul256.vim'
   Plug 'rakr/vim-one'
+  Plug 'skbolton/embark'
   
   " JavaScript
   Plug 'pangloss/vim-javascript'
@@ -57,8 +57,8 @@ call plug#begin()
   " Nerd Commenter
   Plug 'preservim/nerdcommenter'
 
-  "Buftabline
-  Plug 'pacha/vem-tabline'
+  "Buffer line
+  Plug 'mengelbrecht/lightline-bufferline'
   
   " Colorizer
   Plug 'norcalli/nvim-colorizer.lua'
@@ -87,20 +87,19 @@ call plug#begin()
 
   " Obsession
   Plug 'tpope/vim-obsession'
+  
+  " Tree Sitter
+  Plug 'nvim-treesitter/nvim-treesitter'
+
+  "Git Messenger
+  Plug 'rhysd/git-messenger.vim'
 
   "Experimental"
   Plug 'romgrk/todoist.vim', { 'do': ':TodoistInstall' }
   Plug 'justinmk/vim-dirvish'
-
   Plug 'michal-h21/vim-zettel'
-
   Plug 'kshenoy/vim-signature'
-
   Plug 'itchyny/calendar.vim'
-
-  Plug 'nvim-treesitter/nvim-treesitter'
-
-  Plug 'skbolton/embark'
 
 endif
 

@@ -9,7 +9,7 @@
 - [ ] Fix comments for jsx
 - [ ] Add padding to top of window 
 - [ ] Fix gutter icons for Coc
-- [ ] run Goyo with Dirvish
+- [ ] Add ControlP for finding files
 
 
 

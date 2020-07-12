@@ -126,7 +126,7 @@
   "vim.statusBarColorControl": false,
   "window.titleBarStyle": "custom",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Quiet Light",
+  "workbench.colorTheme": "Cyberpunk",
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "vscode-neovim.neovimPath": "/snap/bin/nvim",

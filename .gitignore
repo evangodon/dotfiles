@@ -13,6 +13,7 @@ readme.md
 # Folder to not ignore
 !/fish/
 !/fish/functions/*
+!/keyboard/*
 
 # Neovim
 !/nvim/**/*

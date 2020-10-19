@@ -11,7 +11,7 @@ function yr  --description "Find a npm script with fzf and yarn run it"
     return
   end
 
-  set script (string split : $script_line | string trim --left | string replace -a -r \" '')
+  set script (string split \": $script_line | string trim --left | string replace -a -r \" '')
 
   yarn run $script[1]
 end

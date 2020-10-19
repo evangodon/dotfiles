@@ -7,12 +7,16 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +26 init.vim
-badd +0 plug-config/lightline.vim
+badd +43 init.vim
+badd +27 plug-config/lightline.vim
+badd +1 todo.md
+badd +1 .gitignore
+badd +1 .netrwhist
+badd +1 plug-config/dirvish.vim
 argglobal
 %argdel
-$argadd init.vim
-edit plug-config/lightline.vim
+$argadd ~/apps/gnvim/runtime/
+edit init.vim
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -31,12 +35,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 37 - ((36 * winheight(0) + 26) / 53)
+let s:l = 41 - ((40 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-37
-normal! 076|
+41
+normal! 047|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

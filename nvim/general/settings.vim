@@ -6,13 +6,11 @@ augroup END
 
 set clipboard=unnamedplus          " Copy paste between vim and everything else
 
-if exists('g:vscode')
-else
-
 set t_Co=256                                                                                      
 set termguicolors                                                                                 
 set nowrap                                                                                        
 syntax on                                                                                         
+set guifont=DroidSansMono\ Nerd\ Font:h11 
 
 " General settings
 set autoindent               " always set autoindenting on
@@ -25,6 +23,7 @@ set mouse=a                  " Enable the mouse
 set colorcolumn=90
 filetype plugin on
 set noswapfile               " Disable swapfiles
+set conceallevel=2
 
 set smartindent
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
@@ -49,8 +48,6 @@ highlight CursorLine guibg=#1a1b26 ctermbg=234
 set number relativenumber
 
 " Spell Check
-autocmd FileType vimwiki setlocal spell spelllang=en_ca
+"autocmd FileType vimwiki setlocal spell spelllang=en_ca
 
 
-
-endif

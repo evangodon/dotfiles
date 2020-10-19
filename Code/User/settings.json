@@ -129,8 +129,11 @@
   "workbench.colorTheme": "Cyberpunk",
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "vscode-neovim.neovimPath": "/snap/bin/nvim",
   "editor.suggest.showColors": true,
   "vscode-neovim.useCtrlKeysForNormalMode": true,
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "editor.semanticHighlighting.enabled": true,
+"faunadb.adminSecretKey": "fnADzWBY6_ACAGIsVnH4zN4Fsvg2mgMuKgbBMSr1",
+"python.languageServer": "Microsoft",
+"vscode-neovim.neovimExecutablePaths.linux": "/home/evan/apps/nvim"
 }

@@ -126,7 +126,7 @@
   "vim.statusBarColorControl": false,
   "window.titleBarStyle": "custom",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Cyberpunk",
+  "workbench.colorTheme": "Quiet Light",
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.suggest.showColors": true,

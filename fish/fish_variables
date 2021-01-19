@@ -1,43 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR EDITOR:nvim
-SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
-SETUVAR FZF_DISABLE_KEYBINDINGS:0
-SETUVAR FZF_LEGACY_KEYBINDINGS:1
-SETUVAR FZF_PREVIEW_DIR_CMD:ls
-SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
-SETUVAR FZF_TMUX_HEIGHT:40\x25
-SETUVAR --path GOPATH:/home/evan/code/go
-SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64
-SETUVAR --path LD_LIBRARY_PATH:/usr/lib
-SETUVAR --export TODOIST_TOKEN:2b0c99ff7106866ec9c1a1d4214e9cb11bb57d7e
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/home/evan/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/home/evan/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:/home/evan
-SETUVAR __fish_init_2_39_8:\x1d
-SETUVAR __fish_init_2_3_0:\x1d
-SETUVAR __fish_init_3_x:\x1d
+SETUVAR Z_DATA:/home/pi/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/pi/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/pi\x24
 SETUVAR __fish_initialized:3100
-SETUVAR _fish_abbr_cdf:__fzf_cd
-SETUVAR _fish_abbr_dev:git\x20checkout\x20develop
-SETUVAR _fish_abbr_gCd:git\x20checkout\x20develop
-SETUVAR _fish_abbr_ga:git\x20add\x20\x2e
-SETUVAR _fish_abbr_gc:git\x20commit
-SETUVAR _fish_abbr_gp:git\x20pull
-SETUVAR _fish_abbr_k:kubectl
-SETUVAR _fish_abbr_lg:lazygit
-SETUVAR _fish_abbr_nfz:set\x20FILE\x20\x28fzf\x29\x20\x26\x26\x20nvim\x20\x24FILE\x3b\x20set\x20\x2d\x2derase\x20FILE
-SETUVAR _fish_abbr_nvims:nvim\x20\x2b\x22source\x20Session\x2evim\x22
-SETUVAR _fish_abbr_q:exit
-SETUVAR _fish_abbr_r:ranger
-SETUVAR _fish_abbr_re:adb\x20shell\x20input\x20keyevent\x2082
-SETUVAR _fish_abbr_save:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20commit\x20\x2dm\x20\x27save\x27
-SETUVAR _fish_abbr_sc:flameshot\x20gui
-SETUVAR _fish_abbr_ssv:sudo\x20surfshark\x2dvpn
-SETUVAR _fish_abbr_td:todoist\x20\x2d\x2dcolor
-SETUVAR echo:LD_LIBRARY_PATH\x1e/usr/lib
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
@@ -61,10 +29,8 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_greeting:
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/evan/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64/bin\x1e/home/evan/Android/Sdk/emulator\x1e/home/evan/Android/Sdk/tools\x1e/home/evan/Android/Sdk/tools/bin\x1e/home/evan/Android/Sdk/platform\x2dtools\x1e/home/evan/\x2efzf/bin\x1e/home/evan/code/go/src/github\x2ecom/sachaos/todoist\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e\x2e/squashfs\x2droot/usr/bin/nvim\x1e/home/evan/apps/squashfs\x2droot/usr/bin/nvim\x1e/home/evan/apps/squashfs\x2droot/usr/bin/nvim\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/home/evan/apps

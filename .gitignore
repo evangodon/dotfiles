@@ -15,11 +15,6 @@ readme.md
 !/fish/functions/*
 !/keyboard/*
 
-# Neovim
-!/nvim/**/*
-nvim/plugged
-nvim/.netrwhist
-
 # Kitty Terminal
 !kitty/*
 

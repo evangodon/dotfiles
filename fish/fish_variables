@@ -29,6 +29,7 @@ SETUVAR _fish_abbr_gp:git\x20pull
 SETUVAR _fish_abbr_k:kubectl
 SETUVAR _fish_abbr_lg:lazygit
 SETUVAR _fish_abbr_nfz:set\x20FILE\x20\x28fzf\x29\x20\x26\x26\x20nvim\x20\x24FILE\x3b\x20set\x20\x2d\x2derase\x20FILE
+SETUVAR _fish_abbr_nightshift:redshift\x20\x2dl\x2040\x2e71427\x3a\x2d74\x2e00597
 SETUVAR _fish_abbr_nvims:nvim\x20\x2b\x22source\x20Session\x2evim\x22
 SETUVAR _fish_abbr_q:exit
 SETUVAR _fish_abbr_r:ranger
@@ -67,4 +68,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/evan/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64/bin\x1e/home/evan/Android/Sdk/emulator\x1e/home/evan/Android/Sdk/tools\x1e/home/evan/Android/Sdk/tools/bin\x1e/home/evan/Android/Sdk/platform\x2dtools\x1e/home/evan/\x2efzf/bin\x1e/home/evan/code/go/src/github\x2ecom/sachaos/todoist\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e\x2e/squashfs\x2droot/usr/bin/nvim\x1e/home/evan/apps/squashfs\x2droot/usr/bin/nvim\x1e/home/evan/apps/squashfs\x2droot/usr/bin/nvim\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/home/evan/apps
+SETUVAR fish_user_paths:/home/evan/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64/bin\x1e/home/evan/Android/Sdk/emulator\x1e/home/evan/Android/Sdk/tools\x1e/home/evan/Android/Sdk/tools/bin\x1e/home/evan/Android/Sdk/platform\x2dtools\x1e/home/evan/\x2efzf/bin\x1e/home/evan/code/go/src/github\x2ecom/sachaos/todoist\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e\x2e/squashfs\x2droot/usr/bin/nvim\x1e/home/evan/apps/squashfs\x2droot/usr/bin/nvim\x1e/home/evan/apps/squashfs\x2droot/usr/bin/nvim\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/usr/lib/jvm/java\x2d8\x2dopenjdk\x2damd64\x1e/home/evan/apps\x1e/home/evan/\x2eyarn/bin

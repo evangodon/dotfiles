@@ -126,7 +126,7 @@
   "vim.statusBarColorControl": false,
   "window.titleBarStyle": "custom",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Quiet Light",
+  "workbench.colorTheme": "Cyberpunk",
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.suggest.showColors": true,
@@ -135,5 +135,6 @@
   "editor.semanticHighlighting.enabled": true,
 "faunadb.adminSecretKey": "fnADzWBY6_ACAGIsVnH4zN4Fsvg2mgMuKgbBMSr1",
 "python.languageServer": "Microsoft",
-"vscode-neovim.neovimExecutablePaths.linux": "/home/evan/apps/nvim"
+"vscode-neovim.neovimExecutablePaths.linux": "/home/evan/apps/nvim",
+"remote.SSH.connectTimeout": 30
 }

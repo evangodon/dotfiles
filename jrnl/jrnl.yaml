@@ -11,9 +11,7 @@ highlight: true
 indent_character: '|'
 journals:
   default: '~/work/lane-notes/jrnl/journal.txt'
-  andy: '~/work/lane-notes/jrnl/one-on-one.txt'
   work: '~/work/lane-notes/jrnl/work-journal.txt'
-  retro: '~/work/lane-notes/jrnl/retro.txt'
 linewrap: 79
 tagsymbols: '@'
 template: false

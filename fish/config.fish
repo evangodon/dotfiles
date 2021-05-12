@@ -1,5 +1,3 @@
-set fish_greeting ""
-
 # Keyboard Shortcuts
 bind \co fzf
 

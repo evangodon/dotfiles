@@ -32,6 +32,8 @@ readme.md
 # jrnl
 !/jrnl/**/*
 
+# pgcli
+!/pgcli/config
 
 # Folders to ignore
 yarn/

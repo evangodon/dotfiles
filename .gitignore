@@ -35,6 +35,9 @@ readme.md
 # pgcli
 !/pgcli/config
 
+# lazygit
+!/lazygit/config.yml
+
 # Folders to ignore
 yarn/
 coc/

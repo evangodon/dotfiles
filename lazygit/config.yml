@@ -4,3 +4,4 @@ gui:
       - reverse
     selectedRangeBgColor:
       - reverse
+  showFileTree: true

@@ -1,14 +1,11 @@
 # https://jasonstitt.com/gitignore-whitelisting-patterns
 
 # Ignore everything in repository root 
-*
-!*/
+
 
 
 # Files to not ignore
 !/.gitignore
-!Hyper/.hyper.js
-readme.md
 
 # Folder to not ignore
 !/fish/
@@ -36,9 +33,11 @@ readme.md
 !/pgcli/config
 
 # lazygit
+lazygit
 !/lazygit/config.yml
 
 # Folders to ignore
 yarn/
 coc/
 
+todo.md

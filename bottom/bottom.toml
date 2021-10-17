@@ -143,7 +143,7 @@
 # a bit hard to use as of now, and there is a planned in-app interface for managing this in the future:
 [disk_filter]
 is_list_ignored = true
-list = ["/dev/sda\\d+", "/dev/loop.*"]
+list = ["/dev/sda\\d+", "/dev/loop.*", "/dev/nvme0n1p1"]
 regex = true
 case_sensitive = false
 #whole_word = false

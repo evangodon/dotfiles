@@ -1,0 +1,5 @@
+- zscroll
+- playerctl
+- wmctrl
+
+- feather icons

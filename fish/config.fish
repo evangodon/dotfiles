@@ -29,9 +29,20 @@ set -gx EDITOR (type -p nvim)
 # nvm
 set -gx nvm_default_version 14 
 
+# Set path for kb cli
+set -gx KB_PATH /home/evan/notes/knowledge-base
+
 # PNPM
 set -gx PNPM_HOME "/home/evan/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 
 # Show snap packages in rofi launcher
 set -gx XDG_DATA_DIRS /usr/share/:/usr/local/share/:/var/lib/snapd/desktop
+
+# Secrets 
+if test -e $__fish_config_dir/.env.local
+    source $__fish_config_dir/.env.local
+end
+
+
+

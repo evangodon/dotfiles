@@ -1,36 +1,16 @@
 # https://jasonstitt.com/gitignore-whitelisting-patterns
 
-# Ignore everything in repository root 
-
-
-
-# Files to not ignore
-!/.gitignore
 
 # Folder to not ignore
 !/fish/
 !/fish/functions/*
-!/fish_varibles/fish_variables
+/fish_varibles/fish_variables
 !/keyboard/*
 
-# Kitty Terminal
-!kitty/*
-
-# Ranger
-!ranger/*
-
-# Awesome WM
-!awesome/*
-!awsome/.git
-
-!rofi/*
-!rofi/**/*
 
 # jrnl
 !/jrnl/**/*
 
-# pgcli
-!/pgcli/config
 
 # lazygit
 lazygit
@@ -41,3 +21,7 @@ yarn/
 coc/
 
 todo.md
+.env.local
+
+pgcli/history
+pgcli/log

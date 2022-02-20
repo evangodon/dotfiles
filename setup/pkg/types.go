@@ -5,4 +5,10 @@ type Step struct {
 	Bin     string
 	Run     func() error
 	Cleanup func()
+	Skip    func() bool
+}
+
+type Config struct {
+	HomeDir string
+	OS      string
 }

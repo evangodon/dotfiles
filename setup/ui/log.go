@@ -25,18 +25,15 @@ func withBorder(color lipgloss.Color, msg string) string {
 		Padding(0, 1).
 		BorderStyle(lipgloss.RoundedBorder()).
 		BorderForeground(color).
-		Width(100).
 		Render(msg)
 }
 
 func Error(step string, err error) {
-	if err != nil {
-		title := renderTitle(red, "Error")
-		formatted := fmt.Sprintf("%s Step: %s\n\n%s", title, step, err)
-		out := withBorder(redLight, formatted)
+	title := renderTitle(red, "ⓧ Error")
+	formatted := fmt.Sprintf("%s Step: %s\n\n%s", title, step, err)
+	out := withBorder(redLight, formatted)
 
-		fmt.Println(out)
-	}
+	fmt.Println(out)
 }
 
 func Info(msg string) {

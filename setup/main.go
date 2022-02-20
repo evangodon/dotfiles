@@ -3,23 +3,22 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os/exec"
+	"os"
+	"runtime"
 	"setup/pkg"
 	"setup/ui"
 )
 
 func excecuteSteps(steps []pkg.Step) {
-	for _, step := range steps {
-		path, _ := exec.LookPath(step.Bin)
-
-		if path != "" {
-			out := fmt.Sprintf("%s already installed. Skipping.", step.Bin)
+	for i, step := range steps {
+		if skip := step.Skip(); skip {
+			out := fmt.Sprintf("Skipping `%d. %s` step", i, step.Name)
 			ui.Info(out)
 
 			continue
 		}
 
-		ui.Info(fmt.Sprintf("Installing %s", step.Bin))
+		ui.Info(fmt.Sprintf("Step %s", step.Name))
 
 		err := step.Run()
 
@@ -31,6 +30,14 @@ func excecuteSteps(steps []pkg.Step) {
 	}
 }
 
+var homeDir, _ = os.UserHomeDir()
+
+var cfg = pkg.Config{
+	HomeDir: homeDir,
+	OS:      runtime.GOOS,
+}
+
+// TODO: add install fish step
 func main() {
 	uiTest := flag.Bool("test-ui", false, "Run UI tests")
 	flag.Parse()
@@ -44,8 +51,9 @@ func main() {
 	}
 
 	steps := []pkg.Step{
-		pkg.GetKitty(),
-		pkg.InstallNixAndPackes(),
+		pkg.GetKitty(cfg),
+		pkg.InstallNix(cfg),
+		pkg.InstallNixPackages(cfg),
 	}
 
 	excecuteSteps(steps)

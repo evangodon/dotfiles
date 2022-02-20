@@ -3,24 +3,15 @@ package pkg
 import (
 	"os"
 	"os/exec"
+	"path"
 	"setup/util"
 )
 
-var packages = []string{
-	"fish",
-	"fzf",
-	"fd",
-	"lazygit",
-	"pgcli",
-	"ncdu",
-	"bottom",
-}
-
-func InstallNixAndPackes() Step {
+func InstallNix(cfg Config) Step {
 	var installScript *os.File
 
 	return Step{
-		Name: "Install Nix and packages",
+		Name: "Install Nix",
 		Bin:  "nix-env",
 		Run: func() error {
 			installScript, err := util.GetRemoteInstaller("https://nixos.org/nix/install")
@@ -39,9 +30,17 @@ func InstallNixAndPackes() Step {
 				return err
 			}
 
-			// TODO: install packages here
-
 			return nil
+		},
+		Skip: func() bool {
+			if cfg.OS == "linux" || cfg.OS == "darwin" {
+				nixEnv := path.Join(cfg.HomeDir, ".nix-profile")
+				if _, err := os.Stat(nixEnv); err == nil {
+					return true
+				}
+			}
+
+			return false
 		},
 		Cleanup: func() {
 			if installScript != nil {

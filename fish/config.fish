@@ -4,9 +4,10 @@ if type -q starship
   starship init fish | source
 end
 
-# Remove welcome message
-set fish_greeting
+#------- Greeting ---------#
+set fish_greeting  # remove fish default greeting
 
+$__fish_config_dir/panes # Display panes  
 
 
 #------- FZF ---------#

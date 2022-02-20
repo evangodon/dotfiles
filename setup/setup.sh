@@ -26,3 +26,6 @@ lilyball/nix-env.fish
 
 # Install kitty terminal
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
+# TODO: let's do this script in go, test in a VM
+# Download node, cargo, go, pipx

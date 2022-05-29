@@ -32,14 +32,9 @@ func excecuteSteps(steps []pkg.Step) {
 
 var homeDir, _ = os.UserHomeDir()
 
-var cfg = pkg.Config{
-	HomeDir: homeDir,
-	OS:      runtime.GOOS,
-}
-
 // TODO: add install fish step
 func main() {
-	uiTest := flag.Bool("test-ui", false, "Run UI tests")
+	uiTest := flag.Bool("test-ui", false, "Run UI mocks")
 	flag.Parse()
 
 	if *uiTest {
@@ -48,6 +43,11 @@ func main() {
 		ui.Info("This is a test info")
 
 		return
+	}
+
+	cfg := pkg.Config{
+		HomeDir: homeDir,
+		OS:      runtime.GOOS,
 	}
 
 	steps := []pkg.Step{

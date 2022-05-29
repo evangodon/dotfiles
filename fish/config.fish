@@ -7,7 +7,11 @@ end
 #------- Greeting ---------#
 set fish_greeting  # remove fish default greeting
 
-$__fish_config_dir/panes # Display panes  
+# Display panes  
+if not set -q NVIM_LISTEN_ADDRESS
+    $__fish_config_dir/panes 
+end
+
 
 
 #------- FZF ---------#

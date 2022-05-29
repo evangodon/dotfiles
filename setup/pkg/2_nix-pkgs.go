@@ -18,7 +18,9 @@ var packages = []string{
 	"ncdu",
 	"neovim",
 	"pgcli",
-	// "vscode",
+	"vscode",
+	"starship",
+	"chezmoi",
 }
 
 func InstallNixPackages(cfg Config) Step {

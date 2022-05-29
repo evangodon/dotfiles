@@ -47,7 +47,7 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/go/bin\x1e/home/evan/go/bin\x1e/home/evan/go\x1e/home/evan/work/scripts\x1e/home/evan/notes/knowledge\x2dbase/scripts\x1e/home/evan/apps\x1e/home/evan/\x2elocal/bin\x1e/home/evan/Android/Sdk/emulator\x1e/home/evan/Android/Sdk/tools\x1e/home/evan/Android/Sdk/tools/bin\x1e/home/evan/Android/Sdk/platform\x2dtools\x1e/home/evan/\x2ecargo/bin\x1e/var/lib/snapd/snap/bin
+SETUVAR fish_user_paths:/home/evan/\x2ego/bin\x1e/usr/local/go/bin\x1e/home/evan/go/bin\x1e/home/evan/go\x1e/home/evan/work/scripts\x1e/home/evan/notes/knowledge\x2dbase/scripts\x1e/home/evan/apps\x1e/home/evan/\x2elocal/bin\x1e/home/evan/Android/Sdk/emulator\x1e/home/evan/Android/Sdk/tools\x1e/home/evan/Android/Sdk/tools/bin\x1e/home/evan/Android/Sdk/platform\x2dtools\x1e/home/evan/\x2ecargo/bin\x1e/var/lib/snapd/snap/bin
 SETUVAR nvm_data:/home/evan/\x2elocal/share/nvm
 SETUVAR --export nvm_default_version:14
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist

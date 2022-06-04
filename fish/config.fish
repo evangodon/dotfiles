@@ -4,8 +4,13 @@ if type -q starship
   starship init fish | source
 end
 
-# Remove welcome message
-set fish_greeting
+#------- Greeting ---------#
+set fish_greeting  # remove fish default greeting
+
+# Display panes  FIXME
+# if not set -q NVIM_LISTEN_ADDRESS
+#     $__fish_config_dir/panes 
+# end
 
 
 
@@ -18,6 +23,7 @@ end
 
 if type -q rg
     set -x FZF_DEFAULT_COMMAND "rg --files --hidden --glob \"!{node_modules,.git}\""
+    set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 end
 
 

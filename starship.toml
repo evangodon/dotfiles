@@ -1,3 +1,7 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$all"
+
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = "bold blue"

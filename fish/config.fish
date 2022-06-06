@@ -59,7 +59,7 @@ set PATH $GOPATH/bin $GOROOT/bin $PATH
 
 switch (uname)
     case Linux
-      return
+
     case Darwin
       # Homebrew
       set -gx HOMEBREW_PREFIX "/opt/homebrew";

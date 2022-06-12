@@ -2,8 +2,18 @@
 
 * {
   al:  #00000000;
-  bg:  #000000ff;
-  se:  #202020ff;
-  fg:  #FFFFFFff;
-  ac:  #00B19Fff;
+  bg:  #1E1D2F;
+  se-bg:  #24273a;
+  se-fg: #FFFFFF;
+  fg:  #D9E0EE;
+  ac:  #7aa2f7;
+
+  bg-col:  #1E1D2F;
+  bg-col-light: #1E1D2F;
+  border-col: #1E1D2F;
+  selected-col: #1E1D2F;
+  blue: #7aa2f7;
+  fg-col: #D9E0EE;
+  fg-col2: #F28FAD;
+  grey: #D9E0EE;
 }

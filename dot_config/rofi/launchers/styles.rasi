@@ -1,35 +1,35 @@
 configuration {
-	font:							"FantasqueSansMono Nerd Font 24";
-    show-icons:                     true;
-	icon-theme: 					"Papirus";
-    display-drun: 					"";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-	sidebar-mode: 					false;
+	font:							             "FantasqueSansMono Nerd Font 24";
+  show-icons:                     true;
+	icon-theme: 					          "Papirus";
+  display-drun: 					        "";
+  drun-display-format:            "{name}";
+  disable-history:                false;
+	sidebar-mode: 					        false;
 }
 
 @import "colors.rasi"
 
 window {
-    transparency:                   "screenshot";
-    fullscreen:                     true;
-    background-color:               #00000066;
-    text-color:                     @fg;
-	border:							0;
-	border-color:					@ac;
-	width:							35%;
-    location:                       center;
-    x-offset:                       0;
-    y-offset:                       0;
-    padding:                        30%;
+  transparency:                   "screenshot";
+  fullscreen:                     true;
+  background-color:               #00000066;
+  text-color:                     @fg;
+	border:	            						0;
+	border-color:				          	@ac;
+	width:							            35%;
+  location:                       center;
+  x-offset:                       0;
+  y-offset:                       0;
+  padding:                        30%;
 }
 
 prompt {
-    enabled: 						true;
+  enabled: 						true;
 	padding: 						0.30% 1% 0% -0.5%;
-	background-color: 				@al;
-	text-color: 					@fg;
-	font:							"FantasqueSansMono Nerd Font 20";
+	background-color:   @al;
+	text-color: 				@fg;
+	font:							  "FantasqueSansMono Nerd Font 20";
 }
 
 entry {
@@ -103,8 +103,8 @@ element-text {
 }
 
 element selected {
-    background-color:               @se;
-    text-color:                     @fg;
+    background-color:               @se-bg;
+    text-color:                     @se-fg;
 	border:							0% 0% 0% 0%;
     border-radius:                  0px;
     border-color:                  	@bg;

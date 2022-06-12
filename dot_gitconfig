@@ -1,0 +1,10 @@
+[user]
+	email = e.godon@outlook.com
+	name = Evan Godon
+[init]
+	defaultBranch = main
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status

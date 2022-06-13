@@ -1,0 +1,22 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$all"
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = "bold blue"
+symbol = "🅰 "
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+
+[nodejs]
+format = " [  $version](bold green) "
+
+[character]
+# success_symbol = "[➜](bold green) "
+# error_symbol = "[✗](bold red) "
+
+[dotnet] # disabling because nx projects use `project.json`
+disabled = true
+

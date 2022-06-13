@@ -12,18 +12,17 @@ set fish_greeting  # remove fish default greeting
 #     $__fish_config_dir/panes 
 # end
 
-
-
 #------- FZF ---------#
-bind \co fzf
+# Use https://minsw.github.io/fzf-color-picker/
+set -x FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
+bind \cr __fish_search_history
 
 if type -q fzf_configure_bindings
-    fzf_configure_bindings --directory=\cp
+    fzf_configure_bindings --directory=\cp --history=\cr --git_log=\cg
 end
 
 if type -q rg
-    set -x FZF_DEFAULT_COMMAND "rg --files --hidden --glob \"!{node_modules,.git}\""
-    set -Ux FZF_DEFAULT_OPTS "--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
+    set -Ux FZF_DEFAULT_COMMAND "rg --files --hidden --glob \"!{node_modules,.git}\""
 end
 
 
@@ -40,25 +39,20 @@ end
 # Set path for kb cli
 set -gx KB_PATH /home/evan/notes/knowledge-base
 
-# PNPM
-set -gx PNPM_HOME "/home/evan/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
-
-# Show snap packages in rofi launcher
-set -gx XDG_DATA_DIRS /usr/share/:/usr/local/share/:/var/lib/snapd/desktop
-
 # Secrets 
 if test -e $__fish_config_dir/.env.local
     source $__fish_config_dir/.env.local
 end
 
-# GoLang
-set GOROOT '/Users/evan.godon/.go'
-set GOPATH '/Users/evan.godon/go'
-set PATH $GOPATH/bin $GOROOT/bin $PATH
 
 switch (uname)
     case Linux
+    # PNPM
+    set -gx PNPM_HOME "/home/evan/.local/share/pnpm"
+    set -gx PATH "$PNPM_HOME" $PATH
+
+    # Show snap packages in rofi launcher
+    set -gx XDG_DATA_DIRS /usr/share/:/usr/local/share/:/var/lib/snapd/desktop
 
     case Darwin
       # Homebrew
@@ -71,6 +65,11 @@ switch (uname)
       set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
       set -q INFOPATH; or set INFOPATH '';
       set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
+
+      # GoLang
+      set GOROOT '/Users/evan.godon/.go'
+      set GOPATH '/Users/evan.godon/go'
+      set PATH $GOPATH/bin $GOROOT/bin $PATH
 end
 
 

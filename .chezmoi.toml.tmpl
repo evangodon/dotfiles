@@ -1,0 +1,23 @@
+{{- $gitname := promptString "Git Name" -}}
+{{- $gitmail := promptString "Git Mail Address" -}}
+
+pager = "less -R"
+
+[data]
+  gitname = {{ $gitname | quote }}
+  gitmail = {{ $gitmail | quote }}
+
+[git]
+  autoCommit = false
+  autoPush = false
+  autoAdd = true
+
+[diff]
+  exclude = ["externals", "scripts"]
+  pager = "delta"
+
+{{- if lookPath "nvim" }}
+[merge]
+  command = "nvim"
+  args = ["-d"]
+{{- end }}

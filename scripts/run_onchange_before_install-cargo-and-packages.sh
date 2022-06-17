@@ -12,7 +12,7 @@ cargo install \
     ripgrep   \
     stylua    \
     bottom    \
-    bat       
+    bat        
 
 
 echo "Finished installing Cargo packages..."

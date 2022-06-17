@@ -17,13 +17,19 @@ set fish_greeting  # remove fish default greeting
 source $__fish_config_dir/fzf.fish
 
 
+#------- Keybindings ---------#
+if command -v chezmoi >/dev/null 2>&1;
+  set chezmoi_source (chezmoi source-path)
+  bind \ch "fzf_search_dir_with_preview $chezmoi_source"
+end
+
 #------- Environment variables ---------#
 
 # Set default editor
 set -gx EDITOR (type -p nvim)
 
 # nvm
-if type -q (which node)
+if command -v node >/dev/null 2>&1;
   set -gx nvm_default_version 16
 end
 

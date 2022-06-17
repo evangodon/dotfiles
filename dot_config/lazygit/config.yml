@@ -6,7 +6,8 @@ gui:
       - reverse
   showFileTree: true
 
-git:
-  paging:
-    colorArg: always
-    useConfig: true
+# delta doesn't work well 
+# git:
+#   paging:
+#     colorArg: always
+#     useConfig: true

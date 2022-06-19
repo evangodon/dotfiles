@@ -107,7 +107,7 @@ editor = "nvim -c 'noautocmd ZenMode'"
 # Command used to preview a note during interactive fzf mode.
 # Set it to an empty string "" to disable preview.
 
-fzf-preview = "preview_file_for_fzf {-1}"
+fzf-preview = "custom_fzf_preview_window {-1}"
 
 
 # LSP

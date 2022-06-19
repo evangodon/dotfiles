@@ -1,9 +1,11 @@
 
 # TODO
+- [ ] Sort fzf search by last modified
+- [ ] Add keybinding to fish shell for searching notes
 - [ ] Move notes with commands to dotfiles
+- [ ] Probably should move nvim config to dotfiles
+- [ ] Add chezmoi script to pull neovim config on chezmoi update
 
-- [ ] Add right padding to fzf search with preview command
-- [ ] create readme files in each config folder with commands
 - [ ] set up github action to check for secrets
 - [ ] configure neofetch 
 - [ ] Add screenshot 
@@ -28,3 +30,4 @@ Theming
 - [X] Add keybinding to edit file managed by chezmoi
 - [X] Create autocmd to run chezmoi apply on writes to the source state
 - [X] Make paths shorted for the fzf search command
+- [X] Add right padding to fzf search with preview command

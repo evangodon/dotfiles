@@ -10,5 +10,7 @@ To check keybindings: `bind`
 - `Crtr`+`r`: Search history
 - `Crtr`+`g`: Search git commits
 - `Crtr`+`v`: Search env variables
+- `Crtl`+`h`: Search the chezmoi source files
+- `Crtl`+`n`: Search notes in knowledge base
 
 

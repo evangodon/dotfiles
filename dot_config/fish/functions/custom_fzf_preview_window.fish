@@ -1,9 +1,9 @@
-function preview_file_for_fzf  --description "Preview for fzf" 
+function custom_fzf_preview_window  --description "Preview for fzf" 
   set path $argv   
 
   # Check if path is directory
   if test -d $path;
-    tree -l 2 $path
+    lsd --tree --color always  $path
     return 
   end
 
@@ -13,7 +13,7 @@ function preview_file_for_fzf  --description "Preview for fzf"
     return 
   end
 
-  # else use bat
+  # else use cat
   cat --color=always $path
 end
 

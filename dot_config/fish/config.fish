@@ -7,21 +7,7 @@ end
 #------- Greeting ---------#
 set fish_greeting  # remove fish default greeting
 
-# Display panes  FIXME
-# if not set -q NVIM_LISTEN_ADDRESS
-#     $__fish_config_dir/panes 
-# end
-
-#------- FZF ---------#
-# Use https://minsw.github.io/fzf-color-picker/
-source $__fish_config_dir/fzf.fish
-
-
-#------- Keybindings ---------#
-if command -v chezmoi >/dev/null 2>&1;
-  set chezmoi_source (chezmoi source-path)
-  bind \ch "fzf_search_dir_with_preview $chezmoi_source"
-end
+# $__fish_config_dir/panes.sh
 
 #------- Environment variables ---------#
 
@@ -36,6 +22,25 @@ end
 # Set path for kb cli
 set -gx KB_PATH /home/evan/notes/knowledge-base
 
+#------- FZF ---------#
+# Use https://minsw.github.io/fzf-color-picker/
+source $__fish_config_dir/fzf.fish
+
+
+#------- Keybindings ---------#
+if command -v chezmoi >/dev/null 2>&1;
+  set chezmoi_source (chezmoi source-path)
+  bind \ch "custom_fzf_search_dir --directory=$chezmoi_source"
+end
+
+bind \cn "custom_fzf_search_dir --extension=md --directory=$KB_PATH"
+
+#------- Aliases ---------#
+alias nfz custom_fzf_search_dir
+alias reload_fish_config "source $__fish_config_dir/config.fish"
+
+
+
 # Secrets 
 if test -e $__fish_config_dir/.env.local
     source $__fish_config_dir/.env.local
@@ -44,10 +49,6 @@ end
 
 switch (uname)
     case Linux
-    # PNPM
-    set -gx PNPM_HOME "/home/evan/.local/share/pnpm"
-    set -gx PATH "$PNPM_HOME" $PATH
-
     # Show snap packages in rofi launcher
     set -gx XDG_DATA_DIRS /usr/share/:/usr/local/share/:/var/lib/snapd/desktop
 
@@ -62,11 +63,6 @@ switch (uname)
       set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
       set -q INFOPATH; or set INFOPATH '';
       set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
-
-      # GoLang
-      set GOROOT '/Users/evan.godon/.go'
-      set GOPATH '/Users/evan.godon/go'
-      set PATH $GOPATH/bin $GOROOT/bin $PATH
 end
 
 

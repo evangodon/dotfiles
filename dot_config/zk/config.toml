@@ -1,6 +1,5 @@
 # zk configuration file
-#
-# Uncomment the properties you want to customize.
+# https://github.com/mickael-menu/zk/blob/main/docs/config.md
 
 # NOTE SETTINGS
 #
@@ -100,9 +99,7 @@ multiword-tags = false
 
 # EXTERNAL TOOLS
 [tool]
-
-editor = "vim"
-
+editor = "nvim -c 'noautocmd ZenMode'"
 # Pager used to scroll through long output. If you want to disable paging
 # altogether, set it to an empty string "".
 #pager = "less -FIRX"
@@ -110,8 +107,6 @@ editor = "vim"
 # Command used to preview a note during interactive fzf mode.
 # Set it to an empty string "" to disable preview.
 
-# bat is a great tool to render Markdown document with syntax highlighting.
-#https://github.com/sharkdp/bat
 fzf-preview = "preview_file_for_fzf {-1}"
 
 
@@ -166,7 +161,9 @@ dead-link = "error"
 # Here are a few aliases to get you started.
 
 # Shortcut to a command.
-#ls = "zk list $@"
+e = "zk edit $argv"
+n = "zk new $argv"
+ls = "zk list -i  $argv"
 
 # Default flags for an existing command.
 #list = "zk list --quiet $@"

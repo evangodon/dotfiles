@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Write theme colors to chezmoi config file
+
+# Check for changes in theme file
+# theme hash: {{ include "themes/catppuccin-mocha.toml" | sha256sum }}
+
+theme="$(chezmoi source-path)/themes/catppuccin-mocha.toml"
+# Check if theme path is valid
+if [ ! -f "$theme" ]; then
+    echo "theme file not found at $theme"
+    exit 1
+fi
+
+chezmoi_config="$HOME/.config/chezmoi/chezmoi.toml"
+# Check if config path is valid
+if [ ! -f "$chezmoi_config" ]; then
+    echo "Chezmoi config not found at $chezmoi_config"
+    exit 1
+fi
+
+# Remove lines after [data.theme] in chezmoi config to remove old color table
+sed -i '/^\[data.theme\]/,$d' "$chezmoi_config"
+
+# Add theme
+cat $theme >> $chezmoi_config
+echo "Added [data.theme] to $chezmoi_config"
+

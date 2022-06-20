@@ -46,7 +46,6 @@ if test -e $__fish_config_dir/.env.local
     source $__fish_config_dir/.env.local
 end
 
-
 switch (uname)
     case Linux
     # Show snap packages in rofi launcher

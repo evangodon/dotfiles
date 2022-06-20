@@ -14,6 +14,7 @@ Lazygit
   - [ ] Change color of my username and other users
 
 Theming
+- [ ] Create data file for colour theme
 - [ ] Fix color of nvim background and kitty background in darkmode
 - [ ] Add theme for helix editor https://github.com/catppuccin/helix
 - [ ] Add theme of lazygit

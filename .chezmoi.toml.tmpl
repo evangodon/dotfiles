@@ -3,10 +3,6 @@
 
 pager = "less -R"
 
-[data]
-  gitname = {{ $gitname | quote }}
-  gitmail = {{ $gitmail | quote }}
-
 [git]
   autoCommit = false
   autoPush = false
@@ -21,3 +17,8 @@ pager = "less -R"
   command = "nvim"
   args = ["-d"]
 {{- end }}
+
+[data]
+  gitname = {{ $gitname | quote }}
+  gitmail = {{ $gitmail | quote }}
+

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+TEMPLATE='
+  {{ range .}}
+  - {{ printf "[%s](%s)" .title .url }}
+  {{- end -}}
+'
+
+# Create template for Slack message
+gh pr list\
+  --limit 3 \
+  --author @me \
+  --json title,url \
+  --template "$TEMPLATE"

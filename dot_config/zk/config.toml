@@ -99,7 +99,7 @@ multiword-tags = false
 
 # EXTERNAL TOOLS
 [tool]
-editor = "nvim -c 'noautocmd ZenMode'"
+editor = "nvim"
 # Pager used to scroll through long output. If you want to disable paging
 # altogether, set it to an empty string "".
 #pager = "less -FIRX"
@@ -161,7 +161,7 @@ dead-link = "error"
 # Here are a few aliases to get you started.
 
 # Shortcut to a command.
-e = "zk edit $argv"
+e = "zk edit -i"
 n = "zk new $argv"
 ls = "zk list -i  $argv"
 

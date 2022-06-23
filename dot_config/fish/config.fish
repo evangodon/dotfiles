@@ -12,7 +12,7 @@ set fish_greeting  # remove fish default greeting
 #------- Environment variables ---------#
 
 # Set default editor
-set -gx EDITOR (type -p nvim)
+set -gx EDITOR nvim
 
 # nvm
 if command -v node >/dev/null 2>&1;
@@ -63,6 +63,4 @@ switch (uname)
       set -q INFOPATH; or set INFOPATH '';
       set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
 end
-
-
 

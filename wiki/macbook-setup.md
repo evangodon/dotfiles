@@ -3,6 +3,8 @@ title: Macbook setup
 ---
 
 # Change keyboard shortcut for changing desktops
+- probably through yabai 
+- check out https://github.com/koekeishiya/skhd
 
 # SSH
 - [ ] Generate ssh key: `ssh-keygen -t ed25519`

@@ -10,3 +10,6 @@ https://github.com/mickael-menu/zk/blob/main/docs/getting-started.md
 ## Edit existing notes 
 `zk edit -i `
 
+## Find all .zk directories with fd
+`fd --hidden ^.zk --type d --maxdepth 3`
+

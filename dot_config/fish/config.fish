@@ -33,7 +33,7 @@ if command -v chezmoi >/dev/null 2>&1;
   bind \ch "custom_fzf_search_dir --directory=$chezmoi_source"
 end
 
-bind \cn "custom_fzf_search_dir --extension=md --directory=$KB_PATH"
+bind \cn search_zk_notebooks 
 
 #------- Aliases ---------#
 alias nfz custom_fzf_search_dir

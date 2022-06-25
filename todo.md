@@ -1,7 +1,6 @@
 
 # TODO
 - [ ] Fzf search for git branch so I can pick a branch easily for `gh pr create --base`
-- [ ] Probably should move nvim config to dotfiles
 - [ ] Add chezmoi script to pull neovim config on chezmoi update
 - [ ] Set EDITOR variable by checking what exists
 - [ ] the fzfsearch for chezmoi files doesn't check dotfiles

@@ -6,6 +6,15 @@ title: Macbook setup
 - probably through yabai 
 - check out https://github.com/koekeishiya/skhd
 
+# Keybindings
+- [ ] Changing workspace
+- [ ] Opening launcher
+- [ ] https://github.com/dmarcotte/easy-move-resize for mouse resizing
+- [ ] https://github.com/keycastr/keycastr to see which keypress gets registered
+
+# General 
+- [ ] Reduce motion option for removing animation when switching desktops
+
 # SSH
 - [ ] Generate ssh key: `ssh-keygen -t ed25519`
 - [ ] Copy public key to macbook: `ssh-copy-id me@mabook_address` 
@@ -14,8 +23,6 @@ title: Macbook setup
 # Shell
 - [ ] Install fish
 - [ ] Install fisher
-- [ ] Install promt (`github.com/pure-fish/pure` is nice)
-    - [ ] Set promt symbol to Apple  (Need NerdFont installed)
 - [ ] Install `github.com/jethrokuan/z`
 
 # GitHub
@@ -27,9 +34,10 @@ title: Macbook setup
 
 - Restart wifi
 `alias restart_en0='sudo ifconfig en0 down && sudo ifconfig en0 up'`
--> note this will disconnect ssh session
 
 
 # Ressources
 - Check out https://karabiner-elements.pqrs.org/
 - App launcher https://www.raycast.com/
+- [X] https://github.com/cmacrae/spacebar
+- [ ] https://github.com/Jean-Tinland/simple-bar-lite

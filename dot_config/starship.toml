@@ -1,14 +1,14 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = "$all"
+# format = "$all"
 
-[aws]
-format = 'on [$symbol($profile )(\($region\) )]($style)'
-style = "bold blue"
-symbol = "🅰 "
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
+# [aws]
+# format = 'on [$symbol($profile )(\($region\) )]($style)'
+# style = "bold blue"
+# symbol = "🅰 "
+# [aws.region_aliases]
+# ap-southeast-2 = "au"
+# us-east-1 = "va"
 
 [nodejs]
 format = " [  $version](bold green) "

@@ -12,15 +12,22 @@ title: Macbook setup
 - [ ] https://github.com/dmarcotte/easy-move-resize for mouse resizing
 - [ ] https://github.com/keycastr/keycastr to see which keypress gets registered
 
+# Fonts
+- [ ] Install JetBrains NerdFont via Brew
+
 # General 
 - [ ] Reduce motion option for removing animation when switching desktops
+
+# Apps
+- [ ] Raycast
 
 # SSH
 - [ ] Generate ssh key: `ssh-keygen -t ed25519`
 - [ ] Copy public key to macbook: `ssh-copy-id me@mabook_address` 
 - [ ] Add new host to `~/.ssh/config`
 
-# Shell
+# Shell 
+Todo: create chezmoi script for this
 - [ ] Install fish
 - [ ] Install fisher
 - [ ] Install `github.com/jethrokuan/z`
@@ -38,6 +45,6 @@ title: Macbook setup
 
 # Ressources
 - Check out https://karabiner-elements.pqrs.org/
-- App launcher https://www.raycast.com/
+- [X] App launcher https://www.raycast.com/
 - [X] https://github.com/cmacrae/spacebar
 - [ ] https://github.com/Jean-Tinland/simple-bar-lite

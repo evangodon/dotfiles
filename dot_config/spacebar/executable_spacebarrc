@@ -27,7 +27,7 @@ spacebar -m config padding_right               15
 spacebar -m config spacing_left                25
 spacebar -m config spacing_right               30
 spacebar -m config text_font                   "$text_font:Regular:12"
-spacebar -m config icon_font                   "$icon_font:Regular:16"
+spacebar -m config icon_font                   "$icon_font:Regular:20"
 spacebar -m config background_color            0xff$black
 spacebar -m config foreground_color            0xff$white
 

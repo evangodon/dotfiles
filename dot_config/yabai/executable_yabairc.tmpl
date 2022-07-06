@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+
+# General
+yabai -m config window_border              on
+yabai -m config layout                     bsp
+yabai -m config window_placement           second_child
+yabai -m config split_ratio                0.5
+yabai -m config auto_balance               off
+
+# Do not manage some apps which are not resizable
+yabai -m rule --add app="^(LuLu|Vimac|Calculator|VLC|System Preferences|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice)$" manage=off
+
+# Spacing
+PADDING=25
+
+yabai -m config external_bar               all:50:0
+yabai -m config top_padding                $PADDING
+yabai -m config bottom_padding             $PADDING
+yabai -m config left_padding               $PADDING
+yabai -m config right_padding              $PADDING
+yabai -m config window_gap                 $PADDING
+
+# Windows
+yabai -m config window_border_width        10
+yabai -m config active_window_border_color 0xff{{ trimPrefix "#" .theme.maroon }}
+yabai -m config normal_window_border_color 0xff{{ trimPrefix "#" .theme.base }}
+# floating windows are always on top (default: off)
+yabai -m config window_topmost on
+# modify window shadows (default: on, options: on, off, float)
+# example: show shadows only for floating windows yabai -m config window_shadow float
+# window opacity (default: off)
+# example: render all unfocused windows with 90% opacity
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.5
+
+
+# Mouse actions 
+# set mouse interaction modifier key (default: fn)
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize

@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+# vi: ft=sh
+
+## COLORS
+ BAR_BACKGROUND_COLOR=0xff{{ trimPrefix "#" .theme.base }}
+export PRIMARY_COLOR=0xff{{ trimPrefix "#" .theme.mauve }}
+export PRIMARY_COLOR_LIGHT=0x44ffffff
+export COLOR_WHITE=0xffffffff
+
+### SPACING
+export BAR_MARGIN=500
+export BAR_Y_OFFSET=8
+export BAR_CORNER_RADIUS=8
+
+export H_PADDING=30
+export ICON_H_PADDING=10
+
+## FONTS
+export ICON_FONT="JetBrainsMono Nerd Font:Bold:18"
+export LABEL_FONT="JetBrainsMono:Regular:14.0"

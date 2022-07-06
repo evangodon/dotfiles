@@ -20,6 +20,7 @@ title: Macbook setup
 
 # Apps
 - [ ] Raycast
+- [ ] AltTab
 
 # SSH
 - [ ] Generate ssh key: `ssh-keygen -t ed25519`
@@ -35,6 +36,10 @@ Todo: create chezmoi script for this
 # GitHub
 - [ ] Add ssh key to GitHub saved keys
 - [ ] Configure SSO if needed
+
+# 📅 Calendar
+- [ ] Enable notifications, send 5 minutes before event
+
 
 
 # Troubleshooting

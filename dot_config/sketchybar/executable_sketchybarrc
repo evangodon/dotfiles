@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # For a more advanced configuration example see:
 # https://github.com/FelixKratz/SketchyBar/discussions/47#discussioncomment-2027233
 # vi: ft=sh
@@ -16,10 +17,15 @@ source "$HOME/.config/sketchybar/styles.sh"
 
 sketchybar --bar height=35        \
                  blur_radius=50   \
+                 display=main    \
                  position=top     \
+                 margin=$BAR_MARGIN  \
+                 y_offset=$BAR_Y_OFFSET  \
+                 corner_radius=$BAR_CORNER_RADIUS   \
                  padding_left="$H_PADDING"  \
                  padding_right="$H_PADDING" \
-                 color="$BAR_BACKGROUND_COLOR"
+                 color="$BAR_BACKGROUND_COLOR" \
+                 font_smoothing=true
 
 
 ##### Changing Defaults #####
@@ -31,7 +37,7 @@ sketchybar --default updates=when_shown                    \
                      drawing=on                            \
                      icon.font="$ICON_FONT"  \
                      icon.color=$COLOR_WHITE                 \
-                     label.font="Hack Nerd Font:Bold:14.0" \
+                     label.font="$LABEL_FONT" \
                      label.color=$COLOR_WHITE                \
                      label.padding_left=4                  \
                      label.padding_right=4                 \
@@ -62,7 +68,7 @@ do
                             background.height=25                           \
                             label.drawing=off                              \
                             script="$PLUGIN_DIR/space.sh"                  \
-                            click_script="yabai -m space --focus $(($i+1))"
+                            click_script="yabai -m space --focus $($i+1)"
 done
 
 ##### Adding Left Items #####
@@ -71,9 +77,9 @@ done
 
 
 sketchybar --add item space_separator left                            \
-           --set space_separator icon=                               \
+           --set space_separator icon=""                               \
                                  background.padding_left=15           \
-                                 background.padding_right=15          \
+                                 background.padding_right=3          \
                                  label.drawing=off                    \
                                                                       \
            --add item window_title left                               \
@@ -85,6 +91,9 @@ sketchybar --add item space_separator left                            \
 sketchybar --add item clock right                        \
            --set clock   update_freq=10                  \
                          script="$PLUGIN_DIR/clock.sh"   \
+           --add item wifi right                        \
+           --set wifi script="$PLUGIN_DIR/wifi.sh"   \
+                      update_freq=10                  \
            --add item battery right                      \
            --set battery script="$PLUGIN_DIR/battery.sh" \
                          update_freq=10                  \

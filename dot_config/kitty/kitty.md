@@ -1,7 +1,6 @@
 ---
 title: Kitty Terminal 
 ---
-Links: [[040_Computer]]
 
 # Kitty
 

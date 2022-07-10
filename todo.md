@@ -1,5 +1,9 @@
 
 # TODO
+- [ ] test out vim keybindings with fish shell, edit https://starship.rs/config/#character
+- [ ] Write bash utils file, use .chezmoitemplates and .chezmoiscripts, see https://github.com/felipecrs/dotfiles/blob/master/home/.chezmoitemplates/scripts-library
+- [ ] Use ShellCheck for bash scripts
+- [ ] Remove prompt from .gitconfig cause it asks on every `chezmoi init`
 - [ ] Fzf search for git branch so I can pick a branch easily for `gh pr create --base`
 - [ ] Add chezmoi script to pull neovim config on chezmoi update
 - [ ] Set EDITOR variable by checking what exists
@@ -16,8 +20,7 @@ Lazygit
   - [ ] Use Editor for fixing merge conflicts
   - [ ] Change color of my username and other users
 
-Notes
-- [ ] Create template for zk notes
+ZK Notes
 
 Theming
 - [ ] Create config file for Flameshot and use custom colours
@@ -40,3 +43,4 @@ Theming
 - [X] Move notes with commands to dotfiles
 - [X] Add keybinding to fish shell for searching notes
 - [X] Create data file for colour theme
+- [X] Create template for zk notes

@@ -14,6 +14,10 @@ set fish_greeting  # remove fish default greeting
 # Set default editor
 set -gx EDITOR nvim
 
+# use main editor for reading manpages
+set -gx MANPAGER "$EDITOR +Man!"
+set -gx MANWIDTH 999 
+
 # nvm
 if command -v node >/dev/null 2>&1;
   set -gx nvm_default_version 16

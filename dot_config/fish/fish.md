@@ -30,4 +30,7 @@ To check keybindings: `bind`
 - `fish_plugins`
 - `completions`
 
+# Check for existence
+- file: `type -e <file>`
+- directory: `type -d <directory>`
 

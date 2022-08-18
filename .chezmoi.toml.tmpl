@@ -1,5 +1,3 @@
-{{- $gitname := promptString "Git Name" -}}
-{{- $gitmail := promptString "Git Mail Address" -}}
 
 pager = "less -R"
 
@@ -19,6 +17,7 @@ pager = "less -R"
 {{- end }}
 
 [data]
-  gitname = {{ $gitname | quote }}
-  gitmail = {{ $gitmail | quote }}
+  gitname = ""
+  gitmail = ""
 
+  {{ template "catppuccin-mocha.toml" . }}

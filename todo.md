@@ -1,8 +1,10 @@
 
 # TODO
+- [ ] Remove gum and use bash for log functions in setup scripts
+
+
 - [ ] test out vim keybindings with fish shell, edit https://starship.rs/config/#character
 - [ ] Write bash utils file, use .chezmoitemplates and .chezmoiscripts, see https://github.com/felipecrs/dotfiles/blob/master/home/.chezmoitemplates/scripts-library
-- [ ] Use ShellCheck for bash scripts
 - [ ] Fzf search for git branch so I can pick a branch easily for `gh pr create --base`
 - [ ] Add chezmoi script to pull neovim config on chezmoi update
 - [ ] Set EDITOR variable by checking what exists
@@ -48,3 +50,4 @@ Theming
 - [X] Create data file for colour theme
 - [X] Create template for zk notes
 - [X] Remove prompt from .gitconfig cause it asks on every `chezmoi init`
+- [X] Use ShellCheck for bash scripts

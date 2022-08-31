@@ -1,0 +1,47 @@
+#!/bin/sh
+
+{{ template "script-utils.sh" . }}
+
+log_info "Installing packages"  
+
+PACKAGES=(
+    'bat'        
+    'bpytop'
+    'broot'
+    'fd'
+    'fish'
+    'fzf'
+    'gh'
+    'lsd'
+    'ncdu'
+    'neovim'
+    'ripgrep'   
+    'slides'
+    'starship'
+    'stylua'    
+    'tldr'
+ )
+
+###
+### ARCH
+###
+{{ if eq .chezmoi.os "linux" -}}
+
+sudo pacman -S "${PACKAGES[@]}"
+
+###
+### MACOS
+###
+{{ else if eq .chezmoi.os "darwin" -}}
+
+brew install "${PACKAGES[@]}"
+
+MAC_PACKAGES=(
+  'skhd'
+  'yabai'
+  'sketchybar'
+ )
+
+brew install "${MAC_PACKAGES[@]}"
+
+{{ end -}}

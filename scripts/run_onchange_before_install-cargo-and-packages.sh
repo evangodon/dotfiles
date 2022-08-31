@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e 
 
 if ! command -v cargo &>/dev/null; then
     echo "Installing Cargo..."

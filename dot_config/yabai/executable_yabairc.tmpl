@@ -1,4 +1,9 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+# vi: ft=sh
+
+# TODO:
+# [ ] https://github.com/koekeishiya/yabai/issues/157
+# [ ] Disable for Slack share screen window 
 
 # General
 yabai -m config window_border              on
@@ -7,13 +12,21 @@ yabai -m config window_placement           second_child
 yabai -m config split_ratio                0.5
 yabai -m config auto_balance               off
 
+$HOME/.config/yabai/layout.sh
+# yabai -m signal --add event=window_created action="$HOME/.config/yabai/toggle_split.sh"
+
 # Do not manage some apps which are not resizable
 yabai -m rule --add app="^(LuLu|Vimac|Calculator|VLC|System Preferences|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice)$" manage=off
+yabai -m rule --add label="Finder" app="^1Password$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^KeyCastr$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
 
 # Spacing
 PADDING=25
 
-yabai -m config external_bar               all:50:0
+yabai -m config external_bar               all:35:0
 yabai -m config top_padding                $PADDING
 yabai -m config bottom_padding             $PADDING
 yabai -m config left_padding               $PADDING
@@ -21,11 +34,12 @@ yabai -m config right_padding              $PADDING
 yabai -m config window_gap                 $PADDING
 
 # Windows
-yabai -m config window_border_width        10
-yabai -m config active_window_border_color 0xff{{ trimPrefix "#" .theme.maroon }}
-yabai -m config normal_window_border_color 0xff{{ trimPrefix "#" .theme.base }}
+yabai -m config window_border_width        12
+yabai -m config active_window_border_color 0xff{{ trimPrefix "#" .theme.mauve }}
+yabai -m config normal_window_border_color 0xff{{ trimPrefix "#" .theme.surface1 }}
 # floating windows are always on top (default: off)
 yabai -m config window_topmost on
+yabai -m config window_shadow              float
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows yabai -m config window_shadow float
 # window opacity (default: off)
@@ -38,5 +52,5 @@ yabai -m config normal_window_opacity 0.5
 # Mouse actions 
 # set mouse interaction modifier key (default: fn)
 yabai -m config mouse_modifier alt
-yabai -m config mouse_action1 move
-yabai -m config mouse_action2 resize
+yabai -m config mouse_action1 move # Need to disable SIP for this 
+yabai -m config mouse_action2 resizemaroon

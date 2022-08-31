@@ -50,7 +50,7 @@ sketchybar --default updates=when_shown                    \
 # to indicate active and available mission control spaces
 
 
-SPACE_ICONS=("" "聆" "" "")
+SPACE_ICONS=("" "聆" "" "" "ﱘ")
 
 
 for i in "${!SPACE_ICONS[@]}"

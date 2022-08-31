@@ -29,6 +29,10 @@ Theming
 - [ ] Add theme for bat
 - [ ] Add theme for glow
 
+*Macbook*
+- [ ] How to open new browser window with keyboard shortcut
+- [ ] Preview cmd-q from closing application
+
 
 
 

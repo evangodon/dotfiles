@@ -8,9 +8,11 @@ title: Macbook setup
 
 # Keybindings
 - [ ] Changing workspace
+   -- alt + s to open *Slack*
 - [ ] Opening launcher
 - [ ] https://github.com/dmarcotte/easy-move-resize for mouse resizing
-- [ ] https://github.com/keycastr/keycastr to see which keypress gets registered
+- [ ] click on "Warn before quitting" in Brave
+
 
 # Fonts
 - [ ] Install JetBrains NerdFont via Brew
@@ -21,6 +23,9 @@ title: Macbook setup
 # Apps
 - [ ] Raycast
 - [ ] AltTab
+- [ ] [keycastr](https://github.com/keycastr/keycastr) to see which keypress gets registered
+- [ ] Shottr for taking screenshots 
+- [ ] Kap for capturing videos 
 
 # SSH
 - [ ] Generate ssh key: `ssh-keygen -t ed25519`
@@ -49,7 +54,8 @@ Todo: create chezmoi script for this
 
 
 # Ressources
-- Check out https://karabiner-elements.pqrs.org/
+- [ ]  https://karabiner-elements.pqrs.org/
 - [X] App launcher https://www.raycast.com/
 - [X] https://github.com/cmacrae/spacebar
 - [ ] https://github.com/Jean-Tinland/simple-bar-lite
+- [ ] https://github.com/AdamWagner/stackline

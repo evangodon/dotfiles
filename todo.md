@@ -1,6 +1,9 @@
 
 # TODO
-- [ ] Remove gum and use bash for log functions in setup scripts
+- [] Add gum binaries to folder 
+  - [X] Macos
+  - [ ] arch
+  - [ ] debian
 
 
 - [ ] test out vim keybindings with fish shell, edit https://starship.rs/config/#character

@@ -12,7 +12,8 @@ PACKAGES=(
     'fish'
     'fzf'
     'glow'
-    'gh'
+    'github-cli'
+    'lazygit'
     'lsd'
     'ncdu'
     'neovim'
@@ -28,7 +29,7 @@ PACKAGES=(
 ###
 {{ if eq .chezmoi.os "linux" -}}
 
-sudo pacman -S "${PACKAGES[@]}"
+yay -S "${PACKAGES[@]}"
 
 ###
 ### MACOS

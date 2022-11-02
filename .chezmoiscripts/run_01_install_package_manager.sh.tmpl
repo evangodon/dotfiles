@@ -7,10 +7,10 @@ log_info "Checking if package manager is installed"
 # Arch
 {{ if eq .chezmoi.os "linux" -}}
 
-  if command -v pacman &>/dev/null; then
-    log_success "pacman installed"
+  if command -v yay &>/dev/null; then
+    log_success "yay installed"
   fi
-  log_info "pacman not found in path"
+  log_info "yay not found in path"
 
 # MacOs
 {{ else if eq .chezmoi.os "darwin" -}}

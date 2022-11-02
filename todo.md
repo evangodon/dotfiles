@@ -1,10 +1,7 @@
 # TODO
 
-- [ ] Remove gum and use bash for log functions in setup scripts
-
 - [ ] Install pipx
 - [ ] test out vim keybindings with fish shell, edit https://starship.rs/config/#character
-- [ ] Write bash utils file, use .chezmoitemplates and .chezmoiscripts, see https://github.com/felipecrs/dotfiles/blob/master/home/.chezmoitemplates/scripts-library
 - [ ] Fzf search for git branch so I can pick a branch easily for `gh pr create --base`
 - [ ] Add chezmoi script to pull neovim config on chezmoi update
 - [ ] Set EDITOR variable by checking what exists
@@ -53,3 +50,5 @@ _Macbook_
 - [x] Create template for zk notes
 - [x] Remove prompt from .gitconfig cause it asks on every `chezmoi init`
 - [x] Use ShellCheck for bash scripts
+- [x] Write bash utils file, use .chezmoitemplates and .chezmoiscripts, see https://github.com/felipecrs/dotfiles/blob/master/home/.chezmoitemplates/scripts-library
+- [x] Finish the ./.chezmoiscripts/run_03_fish_shell.sh script

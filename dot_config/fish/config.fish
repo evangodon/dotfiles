@@ -20,7 +20,7 @@ set -gx MANWIDTH 999
 
 # nvm
 if command -v node >/dev/null 2>&1;
-  set -gx nvm_default_version 16
+  set -gx nvm_default_version 19.1.0
 end
 
 # Set path for kb cli

@@ -22,6 +22,10 @@ mappings = {
     2: "ʲ",
     3: "ᵏ",
     4: "ˡ",
+    5: "ʸ", 
+    6: "ᵘ",
+    7: "ⁱ",
+    8: "ᵒ",
 }
 
 
@@ -73,7 +77,6 @@ def draw_tab(
         draw_title(draw_data, screen, tab, index)
         map_indicator = mappings.get(index, to_sup(str(index)))
         screen.draw(f'{map_indicator} ')
-        screen.cursor.bg = orig_bg
         extra = screen.cursor.x - before - max_title_length
         if extra >= 0:
             screen.cursor.x -= extra + 3
@@ -84,5 +87,6 @@ def draw_tab(
         screen.draw('')
         draw_sep(right_sep)
         draw_sep(' ')
+        screen.cursor.bg = orig_bg
 
     return screen.cursor.x

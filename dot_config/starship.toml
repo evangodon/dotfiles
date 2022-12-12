@@ -14,9 +14,9 @@
 format = " [  $version](bold green) "
 
 [character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[✗](bold red)"
-vicmd_symbol = "[❮](bold blue)"
+  success_symbol = "[❯](bold green)"
+  error_symbol = "[✗](bold red)"
+
 
 [dotnet] # disabling because nx projects use `project.json`
 disabled = true

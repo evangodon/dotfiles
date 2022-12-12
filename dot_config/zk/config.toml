@@ -23,29 +23,6 @@ filename = "{{slug title}}"
 # If not an absolute path, it is relative to .zk/templates/
 template = "default.md"
 
-# Path globs ignored while indexing existing notes.
-#ignore = [
-#    "drafts/*",
-#	"log.md"
-#]
-
-# Configure random ID generation.
-
-# The charset used for random IDs. You can use:
-#   * letters: only letters from a to z.
-#   * numbers: 0 to 9
-#   * alphanum: letters + numbers
-#   * hex: hexadecimal, from a to f and 0 to 9
-#   * custom string: will use any character from the provided value
-#id-charset = "alphanum"
-
-# Length of the generated IDs.
-#id-length = 4
-
-# Letter case for the random IDs, among lower, upper or mixed.
-#id-case = "lower"
-
-
 # EXTRA VARIABLES
 #
 # A dictionary of variables you can use for any custom values when generating
@@ -158,18 +135,13 @@ dead-link = "error"
 #     * you can pipe commands together with the usual | character
 #
 [alias]
-# Here are a few aliases to get you started.
-
 # Shortcut to a command.
 e = "zk edit -i"
 n = "zk new $argv"
 ls = "zk list -i  $argv"
+view = "fd --extension '.md' | fzf | xargs -I {} bat '{}'"
 
-# Default flags for an existing command.
-#list = "zk list --quiet $@"
 
-# Edit the last modified note.
-#editlast = "zk edit --limit 1 --sort modified- $@"
 
 # Edit the notes selected interactively among the notes created the last two weeks.
 # This alias doesn't take any argument, so we don't use $@.

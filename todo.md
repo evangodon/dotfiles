@@ -36,7 +36,7 @@ _Macbook_
 - [ ] How to open new browser window with keyboard shortcut
 - [ ] Preview cmd-q from closing application
 
-# Done
+# DONE
 
 - [x] Create theme for fzf
 - [x] Add .gitconfig file but without email

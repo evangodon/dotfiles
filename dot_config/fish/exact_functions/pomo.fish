@@ -6,5 +6,5 @@ function pomo --description 'start a pomodoro timer'
     return
   end
 
-  timer 10 && notify "Work session done" 
+  timer 25m && notify "Work session done" 
 end

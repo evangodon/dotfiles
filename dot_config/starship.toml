@@ -18,6 +18,7 @@ format = " [  $version](bold green) "
   error_symbol = "[✗](bold red)"
 
 
+
 [dotnet] # disabling because nx projects use `project.json`
 disabled = true
 

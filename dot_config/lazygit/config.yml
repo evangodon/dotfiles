@@ -1,5 +1,4 @@
 gui:
-  showIcons: true
   theme:
     selectedLineBgColor:
       - reverse

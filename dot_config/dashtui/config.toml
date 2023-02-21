@@ -1,0 +1,58 @@
+[[tab]]
+name = " Today"
+modules = ["day-progress", "Weather", "Calendar", "todoist"]
+
+[[tab]]
+name = "  GitHub"
+modules = ["issues", "pr-status"]
+
+
+[[module]]
+name = "day-progress"
+title = "Day Progress"
+exec = "day-progress"
+width = 120
+
+[[module]]
+name = "Weather"
+title = "☀ Weather"
+exec = "curl --silent wttr.in/montreal?0AQ"
+width = 35
+
+[[module]]
+name = "Calendar"
+exec = "cal --color=always"
+
+[[module]]
+name = "todoist"
+exec = "./todoist.ts"
+width = 70
+
+[[module]]
+name = "agenda-today"
+title = "Today's Agenda"
+exec = """
+gcalcli agenda today tomorrow
+"""
+width = 65
+
+[[module]]
+name = "default-todo"
+title = "Todo List"
+exec = "todo --file ~/.todo.md view"
+width = 80
+
+
+[[module]]
+name = "issues"
+title = "GitHub Issues"
+exec = "gh issue list"
+width = 60
+dir = "."
+
+[[module]]
+name = "pr-status"
+title = "PR Status"
+exec = "gh pr status"
+width = 55
+dir = "."

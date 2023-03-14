@@ -39,11 +39,12 @@ yay -S "${PACKAGES[@]}"
 brew install "${PACKAGES[@]}"
 
 MAC_PACKAGES=(
-  'skhd'
-  'yabai'
+  'koekeishiya/formulae/skhd'
+  'koekeishiya/formulae/yabai'
   'sketchybar'
  )
 
+brew tap FelixKratz/formulae
 brew install "${MAC_PACKAGES[@]}"
 
 {{ end -}}

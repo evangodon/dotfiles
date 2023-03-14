@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Move chezmoi scripts to normal scripts
 - [ ] Install pipx
 - [ ] test out vim keybindings with fish shell, edit https://starship.rs/config/#character
 - [ ] Fzf search for git branch so I can pick a branch easily for `gh pr create --base`

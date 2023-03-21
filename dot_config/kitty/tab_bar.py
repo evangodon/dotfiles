@@ -22,10 +22,6 @@ mappings = {
     2: "ʲ",
     3: "ᵏ",
     4: "ˡ",
-    5: "ʸ", 
-    6: "ᵘ",
-    7: "ⁱ",
-    8: "ᵒ",
 }
 
 
@@ -66,10 +62,6 @@ def draw_tab(
         screen.draw('…')
     elif max_title_length == 2:
         screen.draw('…|')
-    elif max_title_length < 6:
-        draw_sep(left_sep)
-        screen.draw((' ' if max_title_length == 5 else '') + '…' + (' ' if max_title_length >= 4 else ''))
-        draw_sep(right_sep)
     else:
         draw_sep(left_sep)
         screen.draw('')
@@ -77,13 +69,13 @@ def draw_tab(
         draw_title(draw_data, screen, tab, index)
         map_indicator = mappings.get(index, to_sup(str(index)))
         screen.draw(f'{map_indicator} ')
-        extra = screen.cursor.x - before - max_title_length
-        if extra >= 0:
-            screen.cursor.x -= extra + 3
-            screen.draw('…')
-        elif extra == -1:
-            screen.cursor.x -= 2
-            screen.draw('…')
+        # extra = screen.cursor.x - before - max_title_length
+        # if extra >= 0:
+        #     screen.cursor.x -= extra + 3
+        #     screen.draw('…')
+        # elif extra == -1:
+        #     screen.cursor.x -= 2
+        #     screen.draw('…')
         screen.draw('')
         draw_sep(right_sep)
         draw_sep(' ')

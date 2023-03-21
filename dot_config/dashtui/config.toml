@@ -1,10 +1,21 @@
+dependencies = ["gh", "jira", "nobob", "xs"]
+
+
 [[tab]]
   name = " Today"
   modules = ["day-progress", "Weather", "Calendar", "todoist"]
 
 [[tab]]
-  name = "  GitHub"
-  modules = ["issues", "pr-status"]
+  name = " GitHub"
+  modules = ["pr-status", "prs"]
+
+[[tab]]
+  name = "󱣘 nobob"
+  modules = ["nobob-swapped", "nobob-doctor"]
+
+[[tab]]
+  name = "󰌃 Jira"
+  modules = ["my-issues"]
 
 
 [[module]]
@@ -21,7 +32,7 @@
 
 [[module]]
   name = "Calendar"
-  exec = "cal --color=always"
+  exec = "bash -c cal"
 
 [[module]]
   name = "todoist"
@@ -42,16 +53,40 @@
   width = 80
 
 
+# JIRA
 [[module]]
   name = "issues"
-  title = "GitHub Issues"
-  exec = "gh issue list"
-  width = 60
-  dir = "."
+  title = "Jira"
+  exec = "jira issue list --plain --columns key,assignee,status --paginate 20"
+  width = 100
 
+[[module]]
+  name = "my-issues"
+  title = "Assigned to me"
+  exec = "jira issue list -a$(jira me) --plain"
+  width = 130
+
+# NOBOB
+[[module]]
+  name = "nobob-swapped"
+  title = "Nobob Swapped"
+  exec = "nobob swapped"
+
+[[module]]
+  name = "nobob-doctor"
+  title = "Nobob doctor"
+  exec = "xs nobob doctor"
+  Dir = "/Users/evan.godon/code/nobob"
+
+# GITHUB
 [[module]]
   name = "pr-status"
   title = "PR Status"
   exec = "gh pr status"
-  width = 55
+  dir = "."
+
+[[module]]
+  name = "prs"
+  title = "PRs"
+  exec = "gh pr list --limit 20"
   dir = "."

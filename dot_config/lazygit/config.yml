@@ -5,8 +5,8 @@ gui:
     selectedRangeBgColor:
       - reverse
   showFileTree: true
-
-# delta doesn't work well 
+  showIcons: true
+# delta doesn't work well
 # git:
 #   paging:
 #     colorArg: always

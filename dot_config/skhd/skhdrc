@@ -106,7 +106,7 @@
 # ]
 
 # kitty terminal
-alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+alt - return : /Applications/kitty.app/Contents/MacOS/kitty -d ~
 
 # flameshot
 # shift + alt - return : /Applications/flameshot.app/Contents/MacOS/flameshot gui
@@ -133,3 +133,4 @@ alt - x    : yabai -m space --mirror x-axis
 
 # Open apps
 alt - s    : open -a Slack 
+alt - m    : open -a Spotify

@@ -14,35 +14,42 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
 source "$HOME/.config/sketchybar/styles.sh"
 
+bar=(
+  height=35      
+  blur_radius=50 
+  display=main   
+  position=top   
+  margin=$BAR_MARGIN  
+  y_offset=$BAR_Y_OFFSET  
+  corner_radius=$BAR_CORNER_RADIUS   
+  padding_left="$H_PADDING"  
+  padding_right="$H_PADDING" 
+  color="$BAR_BACKGROUND_COLOR" 
+  font_smoothing=true
+)
 
-sketchybar --bar height=35        \
-                 blur_radius=50   \
-                 display=main    \
-                 position=top     \
-                 margin=$BAR_MARGIN  \
-                 y_offset=$BAR_Y_OFFSET  \
-                 corner_radius=$BAR_CORNER_RADIUS   \
-                 padding_left="$H_PADDING"  \
-                 padding_right="$H_PADDING" \
-                 color="$BAR_BACKGROUND_COLOR" \
-                 font_smoothing=true
+sketchybar --bar "${bar[@]}"
 
 
 ##### Changing Defaults #####
 # We now change some default values that are applied to all further items
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
+#
+default=(
+  updates=when_shown           
+  drawing=on              
+  icon.font="$ICON_FONT"  
+  icon.color=$COLOR_WHITE 
+  label.font="$LABEL_FONT"
+  label.color=$COLOR_WHITE
+  label.padding_left=4    
+  label.padding_right=4   
+  icon.padding_left=4     
+  icon.padding_right=4
+)
 
-sketchybar --default updates=when_shown                    \
-                     drawing=on                            \
-                     icon.font="$ICON_FONT"  \
-                     icon.color=$COLOR_WHITE                 \
-                     label.font="$LABEL_FONT" \
-                     label.color=$COLOR_WHITE                \
-                     label.padding_left=4                  \
-                     label.padding_right=4                 \
-                     icon.padding_left=4                   \
-                     icon.padding_right=4
+sketchybar --default "${default[@]}"
 
 ##### Adding Mission Control Space Indicators #####
 # Now we add some mission control spaces:
@@ -50,38 +57,54 @@ sketchybar --default updates=when_shown                    \
 # to indicate active and available mission control spaces
 
 
-SPACE_ICONS=("" "聆" "" "" "ﱘ")
 
+space_styles() {
+  space_index=$1
+  styles=(
+    associated_space=$space_index                   
+    icon=${SPACE_ICONS[$space_index-1]}                         
+    icon.highlight_color="$PRIMARY_COLOR"          
+    icon.padding_left="$ICON_H_PADDING"            
+    icon.padding_right="$ICON_H_PADDING"           
+    background.padding_left=5                      
+    background.padding_right=5                     
+    background.color=$PRIMARY_COLOR_LIGHT          
+    background.corner_radius=0                     
+    background.height=25                           
+    label.drawing=off                              
+    script="$PLUGIN_DIR/space.sh"                  
+  )
+  echo "${styles[@]}"
+}
+
+SPACE_ICONS=(" " "" "聆" "" "ﱘ")
 
 for i in "${!SPACE_ICONS[@]}"
 do
-  sketchybar --add space space.$i left                                     \
-             --set space.$i associated_space=$(($i+1))                     \
-                            icon=${SPACE_ICONS[i]}                         \
-                            icon.highlight_color="$PRIMARY_COLOR"          \
-                            icon.padding_left="$ICON_H_PADDING"              \
-                            icon.padding_right="$ICON_H_PADDING"             \
-                            background.padding_left=5        \
-                            background.padding_right=5       \
-                            background.color=$PRIMARY_COLOR_LIGHT          \
-                            background.corner_radius=0                     \
-                            background.height=25                           \
-                            label.drawing=off                              \
-                            script="$PLUGIN_DIR/space.sh"                  \
-                            click_script="yabai -m space --focus $($i+1)"
+  index=$(($i+1))
+  styles=$(space_styles $index)
+  sketchybar --add space space.$index left  --set space.$index $styles
 done
 
 ##### Adding Left Items #####
 # We add some regular items to the left side of the bar
 # only the properties deviating from the current defaults need to be set
 
+media=(
+  script="$PLUGIN_DIR/media.sh"
+  updates=on
+)
+
+# Uncomment when event media_change is released
+# sketchybar --add item media center                               \
+#           --set media "${media[@]}"                               \
+#           --subscribe media media_change                     \
 
 sketchybar --add item space_separator left                            \
            --set space_separator icon=""                               \
                                  background.padding_left=15           \
                                  background.padding_right=3          \
                                  label.drawing=off                    \
-                                                                      \
            --add item window_title left                               \
            --set window_title    script="$PLUGIN_DIR/window_title.sh" \
                                  icon.drawing=off                     \

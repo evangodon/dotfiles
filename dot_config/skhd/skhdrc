@@ -134,3 +134,4 @@ alt - x    : yabai -m space --mirror x-axis
 # Open apps
 alt - s    : open -a Slack 
 alt - m    : open -a Spotify
+alt - t    : open -a Todoist

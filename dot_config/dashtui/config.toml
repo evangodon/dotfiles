@@ -3,26 +3,28 @@ dependencies = ["gh", "jira", "nobob", "xs"]
 
 [[tab]]
   name = " Today"
-  modules = ["day-progress", "Weather", "Calendar", "todoist"]
+  modules = ["day-progress", "Weather", "Calendar", "todos"]
 
 [[tab]]
-  name = " GitHub"
+  name = " GitHub"
   modules = ["pr-status", "prs"]
 
 [[tab]]
-  name = "󱣘 nobob"
-  modules = ["nobob-swapped", "nobob-doctor"]
+  name = "󱣘 Containers"
+  modules = ["nobob-swapped", "nobob-doctor", "colima"]
 
 [[tab]]
   name = "󰌃 Jira"
-  modules = ["my-issues"]
+  modules = ["my-issues", "open-issues"]
 
 
 [[module]]
   name = "day-progress"
   title = "Day Progress"
-  exec = "day-progress"
-  width = 120
+  exec = """
+  day-progress --start "9:30AM" --end "5:30PM"
+  """
+  width = 9999
 
 [[module]]
   name = "Weather"
@@ -33,6 +35,11 @@ dependencies = ["gh", "jira", "nobob", "xs"]
 [[module]]
   name = "Calendar"
   exec = "bash -c cal"
+
+[[module]]
+  name = "todos"
+  exec = "todo view"
+  dir = "/Users/evan.godon/code/monocle"
 
 [[module]]
   name = "todoist"
@@ -55,16 +62,22 @@ dependencies = ["gh", "jira", "nobob", "xs"]
 
 # JIRA
 [[module]]
-  name = "issues"
-  title = "Jira"
-  exec = "jira issue list --plain --columns key,assignee,status --paginate 20"
-  width = 100
+  name = "my-issues"
+  title = "Tickets assigned to me"
+  exec = """
+  jira issue list -a$(jira me) --status "~Closed"  --status "~Prod Awaiting Verification" --plain --columns key,assignee,status --paginate 20 | cat
+  """
 
 [[module]]
-  name = "my-issues"
-  title = "Assigned to me"
-  exec = "jira issue list -a$(jira me) --plain"
-  width = 130
+  name = "open-issues"
+  title = "Open tickets"
+  exec = "jira sprint list --current --plain --status Open | cat"
+
+
+[[module]]
+  name = "colima"
+  title = "Colima Status"
+  exec = "colima status --extended"
 
 # NOBOB
 [[module]]
@@ -74,7 +87,7 @@ dependencies = ["gh", "jira", "nobob", "xs"]
 
 [[module]]
   name = "nobob-doctor"
-  title = "Nobob doctor"
+  title = "Nobob Doctor"
   exec = "xs nobob doctor"
   Dir = "/Users/evan.godon/code/nobob"
 
@@ -87,6 +100,9 @@ dependencies = ["gh", "jira", "nobob", "xs"]
 
 [[module]]
   name = "prs"
-  title = "PRs"
-  exec = "gh pr list --limit 20"
+  title = "My PRs"
+  exec = "gh pr list --author @me --limit 5"
   dir = "."
+
+[settings]
+  primary-color = "#fab387"

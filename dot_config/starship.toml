@@ -22,3 +22,5 @@ format = " [  $version](bold green) "
 [dotnet] # disabling because nx projects use `project.json`
 disabled = true
 
+[docker_context]
+disabled = true

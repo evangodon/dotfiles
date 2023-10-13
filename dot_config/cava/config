@@ -1,3 +1,36 @@
 [input]
 method = portaudio
 source = "Background Music"
+
+[general]
+
+# The number of bars (0-512). 0 sets it to auto (fill up console).
+# Bars' width and space between bars in number of characters.
+bar_width = 1
+bar_spacing = 1
+
+# Manual sensitivity in %. If autosens is enabled, this will only be the initial value.
+# 200 means double height. Accepts only non-negative values.
+sensitivity = 60
+
+# Accepts only non-negative values.
+framerate = 60
+
+[eq]
+1=4
+2=2
+3=1
+4=1
+5=0.5
+
+[color]
+gradient = 1
+gradient_count = 8
+gradient_color_8 = '#e78284'
+gradient_color_7 = '#e78284'
+gradient_color_6 = '#ea999c'
+gradient_color_5 = '#ea999c'
+gradient_color_4 = '#eebebe'
+gradient_color_3 = '#babbf1'
+gradient_color_2 = '#babbf1'
+gradient_color_1 = '#ca9ee6'

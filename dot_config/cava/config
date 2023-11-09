@@ -17,7 +17,7 @@ sensitivity = 60
 framerate = 60
 
 [eq]
-1=4
+1=2
 2=2
 3=1
 4=1
@@ -27,10 +27,10 @@ framerate = 60
 gradient = 1
 gradient_count = 8
 gradient_color_8 = '#e78284'
-gradient_color_7 = '#e78284'
-gradient_color_6 = '#ea999c'
+gradient_color_7 = '#eba0ac'
+gradient_color_6 = '#eba0ac'
 gradient_color_5 = '#ea999c'
 gradient_color_4 = '#eebebe'
 gradient_color_3 = '#babbf1'
-gradient_color_2 = '#babbf1'
-gradient_color_1 = '#ca9ee6'
+gradient_color_2 = '#94e2d5'
+gradient_color_1 = '#a6e3a1'

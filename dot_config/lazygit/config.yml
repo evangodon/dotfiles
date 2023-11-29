@@ -5,9 +5,12 @@ gui:
     selectedRangeBgColor:
       - reverse
   showFileTree: true
-  showIcons: true
-# delta doesn't work well
-# git:
-#   paging:
-#     colorArg: always
-#     useConfig: true
+  nerdFontsVersion: "3"
+  showCommandLog: true
+  commandLogSize: 20
+  border: "rounded"
+git:
+  branchLogCmd: "git log --graph --color=always --decorate --oneline --all"
+  paging:
+    colorArg: always
+    useConfig: true

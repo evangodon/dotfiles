@@ -51,6 +51,15 @@ template = "default.md"
 #[group."<NAME>".extra]
 #key = "value"
 
+[group.daily]
+# Directories listed here will automatically use this group when creating notes.
+paths = ["journal/daily"]
+
+[group.daily.note]
+filename = "{{format-date now '%Y-%m-%d'}}"
+extension = "md"
+template = "daily.md"
+
 
 # MARKDOWN SETTINGS
 [format.markdown]
@@ -141,6 +150,7 @@ n = "zk new $argv"
 ls = "zk list -i  $argv"
 view = "fd --extension '.md' | fzf | xargs -I {} bat '{}'"
 random = "zk list --quiet --format full --sort random --limit 1"
+daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
 
 
 # Edit the notes selected interactively among the notes created the last two weeks.

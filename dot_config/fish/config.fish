@@ -39,9 +39,13 @@ end
 
 bind \cn search_zk_notebooks 
 
+# Search and kill process
+bind \ck _fzf_search_processes | xargs kill
+
 #------- Aliases ---------#
 alias nfz custom_fzf_search_dir
 alias reload_fish_config "source $__fish_config_dir/config.fish"
+alias openpr "gh pr view --web"
 
 
 
@@ -68,3 +72,9 @@ switch (uname)
       set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
 end
 
+
+# Created by `pipx` on 2023-03-17 16:47:03
+set PATH $PATH /Users/evan.godon/.local/bin
+
+
+alias assume="source /opt/homebrew/Cellar/granted/0.11.1/bin/assume.fish"

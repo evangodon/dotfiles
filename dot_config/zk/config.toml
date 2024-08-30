@@ -94,6 +94,7 @@ editor = "nvim"
 # Set it to an empty string "" to disable preview.
 
 fzf-preview = "custom_fzf_preview_window {-1}"
+fzf-line = "{{style 'blue' rel-path}}{{#each tags}} #{{this}}{{/each}} {{style 'black' body}}"
 
 
 # LSP
@@ -150,7 +151,8 @@ n = "zk new $argv"
 ls = "zk list -i  $argv"
 view = "fd --extension '.md' | fzf | xargs -I {} bat '{}'"
 random = "zk list --quiet --format full --sort random --limit 1"
-daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
+daily = 'zk new --no-input --working-dir="/Users/evan.godon/notes/work/" "./journal/daily"'
+thought = 'echo (date +"[%I:%M%p]" | sed "s/^0//") - $argv >> (zk list --sort created- --format path --delimiter " " --limit 1 --quiet --working-dir="/Users/evan.godon/notes/work/" journal/daily)'
 
 
 # Edit the notes selected interactively among the notes created the last two weeks.

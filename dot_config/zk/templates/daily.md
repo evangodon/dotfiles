@@ -1,5 +1,4 @@
 # {{format-date now '%A, %B %d' }}
 
-## Today's Focus
+## Today's Tasks
 
-## Log

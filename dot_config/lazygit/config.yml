@@ -2,8 +2,6 @@ gui:
   theme:
     selectedLineBgColor:
       - reverse
-    selectedRangeBgColor:
-      - reverse
   showFileTree: true
   nerdFontsVersion: "3"
   showCommandLog: true
@@ -12,5 +10,6 @@ gui:
 git:
   branchLogCmd: "git log --graph --color=always --decorate --oneline --all"
   paging:
-    colorArg: always
-    useConfig: true
+    externalDiffCommand: difft --color=always --display=inline --syntax-highlight=on --tab-width=2
+os:
+  editPreset: nvim

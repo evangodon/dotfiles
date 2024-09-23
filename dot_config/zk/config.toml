@@ -65,7 +65,7 @@ template = "daily.md"
 paths = ["journal"]
 
 [group.weekly.note]
-filename = "{{format-date (date 'last week') '%Y-%m-%d'}}-{{format-date (date 'now') '%Y-%m-%d'}}"
+filename = "week-of-{{format-date (date 'last week')}}"
 extension = "md"
 template = "weekly.md"
 
@@ -162,10 +162,7 @@ view = "fd --extension '.md' | fzf | xargs -I {} bat '{}'"
 random = "zk list --quiet --format full --sort random --limit 1"
 weekly = 'zk new --no-input --working-dir="$WORK_NOTES_DIR" "./journal"'
 daily = 'zk new --no-input --working-dir="$WORK_NOTES_DIR" --group "daily" "./journal/daily"'
-thought = """\
-  echo (date +'[%I:%M%p]' | sed 's/^0//') - $argv >>\
-  (zk new --no-input --working-dir="$WORK_NOTES_DIR" "./journal/daily" --print-path)
-"""
+log = '$chezmoi_source/dot_config/zk/new-log.sh "$argv"'
 
 
 # Edit the notes selected interactively among the notes created the last two weeks.

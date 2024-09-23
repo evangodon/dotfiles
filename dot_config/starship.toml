@@ -1,5 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+command_timeout = 1000
 # format = "$all"
 
 # [aws]
@@ -14,9 +15,8 @@
 format = " [  $version](bold green) "
 
 [character]
-  success_symbol = "[❯](bold green)"
-  error_symbol = "[✗](bold red)"
-
+success_symbol = "[❯](bold green)"
+error_symbol = "[✗](bold red)"
 
 
 [dotnet] # disabling because nx projects use `project.json`

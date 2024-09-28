@@ -12,7 +12,7 @@ fi
 
 DATE="### $(date +'%A, %B %d')"
 TIME=$(date +'[%I:%M%p]' | sed 's/^0//')
-LOG_FILE="$WORK_NOTES_DIR/journal/log.md"
+LOG_FILE="$WORK_NOTES_DIR/Log/log.md"
 NEW_ENTRY="- $TIME $1"
 
 # Trim only trailing empty lines at the end of the log file (works on macOS)

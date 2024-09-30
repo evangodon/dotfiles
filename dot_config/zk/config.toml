@@ -145,6 +145,7 @@ random = "zk list --quiet --format full --sort random --limit 1"
 weekly = 'zk new --no-input --working-dir="$WORK_NOTES_DIR" "./Log"'
 daily = 'zk new --no-input --working-dir="$WORK_NOTES_DIR" --group "daily" "./Log/daily"'
 log = '$chezmoi_source/dot_config/zk/new-log.sh "$argv"'
+logtail = 'tail $WORK_NOTES_DIR/Log/log.md'
 
 
 # Edit the notes selected interactively among the notes created the last two weeks.

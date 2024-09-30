@@ -1,4 +1,4 @@
 ---
 title: {{ title }}
-created: {{ date now "%d-%m-%Y" }}
+created: {{ format-date now "%d-%m-%Y" }}
 ---

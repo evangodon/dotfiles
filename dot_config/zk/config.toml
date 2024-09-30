@@ -142,10 +142,14 @@ n = "zk new $argv"
 ls = "zk list -i  $argv"
 view = "fd --extension '.md' | fzf | xargs -I {} bat '{}'"
 random = "zk list --quiet --format full --sort random --limit 1"
-weekly = 'zk new --no-input --working-dir="$WORK_NOTES_DIR" "./Log"'
+conf = '$EDITOR "$chezmoi_source/dot_config/zk/config.toml"'
+
+# Related to Work Notes
+weekly = 'nvim $WORK_NOTES_DIR/Log/weekly-log.md'
 daily = 'zk new --no-input --working-dir="$WORK_NOTES_DIR" --group "daily" "./Log/daily"'
 log = '$chezmoi_source/dot_config/zk/new-log.sh "$argv"'
 logtail = 'tail $WORK_NOTES_DIR/Log/log.md'
+logedit = 'nvim $WORK_NOTES_DIR/Log/log.md'
 
 
 # Edit the notes selected interactively among the notes created the last two weeks.
@@ -166,4 +170,3 @@ logtail = 'tail $WORK_NOTES_DIR/Log/log.md'
 #hist = "zk list --format path --delimiter0 --quiet $@ | xargs -t -0 git log --patch --"
 
 # Edit this configuration file.
-#conf = '$EDITOR "$ZK_NOTEBOOK_DIR/.zk/config.toml"'

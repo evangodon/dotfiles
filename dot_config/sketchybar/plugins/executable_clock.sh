@@ -2,8 +2,5 @@
 
 source "$HOME/.config/sketchybar/styles.sh"
 
-sketchybar --set $NAME \
-  icon=""            \
-  icon.padding_left=$ICON_H_PADDING \
-  label="$(date '+%I:%M   %a, %b %d')"
+sketchybar --set $NAME label="$(date '+%I:%M%p   %a, %b %d' | sed 's/^0//')"
 

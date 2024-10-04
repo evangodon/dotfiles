@@ -2,19 +2,29 @@
 # vi: ft=sh
 
 ## COLORS
-export BAR_BACKGROUND_COLOR=0xff{{ trimPrefix "#" .theme.base }}
-export PRIMARY_COLOR=0xff{{ trimPrefix "#" .theme.mauve }}
-export PRIMARY_COLOR_LIGHT=0x44ffffff
+
+get_primary_color() {
+  local opacity="${1:-ff}"
+  local primary_color={{ trimPrefix "#" .theme.red }}
+
+  echo "0x$opacity$primary_color"
+}
+
+BG_ALPHA=79
+
+export BAR_BACKGROUND_COLOR=0x"$BG_ALPHA"{{ trimPrefix "#" .theme.base }}
+export PRIMARY_COLOR=$(get_primary_color ff)
+export PRIMARY_COLOR_LIGHT=$(get_primary_color 30)
 export COLOR_WHITE=0xffffffff
 
 ### SPACING
-export BAR_MARGIN=500
+export BAR_MARGIN=300
 export BAR_Y_OFFSET=8
 export BAR_CORNER_RADIUS=8
 
-export H_PADDING=30
-export ICON_H_PADDING=10
+export H_PADDING=10
+export ICON_H_PADDING=12
 
 ## FONTS
-export ICON_FONT="JetBrainsMono Nerd Font:Bold:18"
-export LABEL_FONT="JetBrainsMono:Regular:14.0"
+export ICON_FONT="JetBrainsMono Nerd Font:Bold:22"
+export LABEL_FONT="JetBrainsMono:Regular:16.0"

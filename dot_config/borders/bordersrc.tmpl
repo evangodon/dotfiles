@@ -1,0 +1,12 @@
+#!/bin/bash
+# vi: ft=sh
+
+options=(
+	style=round
+	width=8
+	hidpi=off
+	active_color=0xff{{ trimPrefix "#" .theme.red }}
+	inactive_color=0x70{{ trimPrefix "#" .theme.base }}
+)
+
+borders "${options[@]}"

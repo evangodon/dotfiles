@@ -40,7 +40,7 @@ end
 bind \cn search_zk_notebooks 
 
 # Search and kill process
-bind \ck _fzf_search_processes | xargs kill
+# bind \ck _fzf_search_processes | xargs kill
 
 #------- Aliases ---------#
 alias nfz custom_fzf_search_dir

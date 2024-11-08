@@ -2,7 +2,7 @@
 
 My config files managed by [chezmoi](https://www.chezmoi.io/)
 
-## `Set New Machine`
+## `Copy config files to new machine`
 
 1. Install [chezmoi](https://www.chezmoi.io/install/)
 
@@ -12,7 +12,7 @@ My config files managed by [chezmoi](https://www.chezmoi.io/)
 chezmoi init --apply evangodon
 ```
 
-## `Set Terminal`
+## `Terminal`
 
 1. Install [kitty](https://sw.kovidgoyal.net/kitty/binary/#install-kitty)
 

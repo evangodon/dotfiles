@@ -5,8 +5,6 @@
   "modules-right": [
     "custom/updates",
     "tray",
-    "custom/wallpaper",
-    "backlight",
     "pulseaudio",
     "clock",
     "custom/power",
@@ -25,25 +23,6 @@
     "tooltip": false,
     "format-wifi": "  {essid}",
     "format-ethernet": "",
-  },
-  "backlight": {
-    "tooltip": false,
-    "format": " {}%",
-    "interval": 1,
-    "on-scroll-up": "light -A 5",
-    "on-scroll-down": "light -U 5",
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 20,
-    },
-    "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""],
   },
   "tray": {
     "icon-size": 18,
@@ -75,12 +54,12 @@
   },
   "cpu": {
     "interval": 15,
-    "format": " {}%",
+    "format": "󰻠 {}%",
     "max-length": 10,
   },
   "memory": {
     "interval": 30,
-    "format": " {}%",
+    "format": " {}%",
     "max-length": 10,
   },
   "custom/media": {
@@ -98,22 +77,15 @@
   },
   "custom/launcher": {
     "format": " ",
-    "on-click": "rofi -show drun",
-    "on-click-right": "killall rofi",
   },
   "custom/power": {
     "format": " ",
-    "on-click": "bash ~/.config/rofi/leave/leave.sh",
+    "on-click": "bash ~/.config/rofi/scripts/powermenu_t6",
   },
   "custom/updates": {
     "format": "{} Update(s)",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
     "interval": 15,
-    "on-click": "echo 'on-click not implemented yet' ",
-  },
-  "custom/wallpaper": {
-    "format": " ",
-    "on-click": "bash ~/.config/system_scripts/pkill_bc",
   },
 }

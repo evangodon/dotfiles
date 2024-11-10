@@ -1,41 +1,14 @@
 # TODO
 
-- [ ] Move chezmoi scripts to normal scripts
-- [ ] Install pipx
-- [ ] test out vim keybindings with fish shell, edit https://starship.rs/config/#character
-- [ ] Fzf search for git branch so I can pick a branch easily for `gh pr create --base`
-- [ ] Add chezmoi script to pull neovim config on chezmoi update
-- [ ] Set EDITOR variable by checking what exists
-- [ ] the fzfsearch for chezmoi files doesn't check dotfiles
+### General
 
-- [ ] set up github action to check for secrets
-- [ ] configure neofetch
-- [ ] Add screenshot
+### Rofi
 
-Tried
+- [ ] Delete unused files
 
-- [-] Sort fzf search by last modified
+### waybar
 
-Lazygit
-
-- [ ] Use Editor for fixing merge conflicts
-- [ ] Change color of my username and other users
-
-ZK Notes
-
-Theming
-
-- [ ] Create config file for Flameshot and use custom colours
-- [ ] Fix color of nvim background and kitty background in darkmode
-- [ ] Add theme for helix editor https://github.com/catppuccin/helix
-- [ ] Add theme of lazygit
-- [ ] Add theme for bat
-- [ ] Add theme for glow
-
-_Macbook_
-
-- [ ] How to open new browser window with keyboard shortcut
-- [ ] Preview cmd-q from closing application
+- [ ] Implement media player module
 
 # DONE
 
@@ -53,3 +26,6 @@ _Macbook_
 - [x] Use ShellCheck for bash scripts
 - [x] Write bash utils file, use .chezmoitemplates and .chezmoiscripts, see https://github.com/felipecrs/dotfiles/blob/master/home/.chezmoitemplates/scripts-library
 - [x] Finish the ./.chezmoiscripts/run_03_fish_shell.sh script
+- [x] Move chezmoi scripts to normal scripts
+- [x] Configure waybar
+- [x] the fzfsearch for chezmoi files doesn't check dotfiles

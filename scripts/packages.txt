@@ -18,3 +18,4 @@ starship
 stylua    
 tldr
 difftastic
+zk

@@ -16,13 +16,14 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 source "$HOME/.config/sketchybar/styles.sh"
 
 bar=(
-  height=40
+  height=35
   blur_radius=20
   display=main   
   position=top   
   margin=$BAR_MARGIN  
   y_offset=$BAR_Y_OFFSET  
   corner_radius=$BAR_CORNER_RADIUS   
+  border_color=$(get_primary_color 70)
   padding_left="$H_PADDING"  
   padding_right="$H_PADDING" 
   color="$BAR_BACKGROUND_COLOR" 
@@ -73,7 +74,7 @@ space_styles() {
     background.color=$PRIMARY_COLOR_LIGHT          
     background.corner_radius=5
     background.height=40
-    label.drawing=off                              
+    label.drawing=off
     script="$PLUGIN_DIR/space.sh"                  
   )
   echo "${styles[@]}"

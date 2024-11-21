@@ -7,7 +7,12 @@ end
 #------- Greeting ---------#
 set fish_greeting  # remove fish default greeting
 
-# $__fish_config_dir/panes.sh
+
+#------- Source my functions in the nested functions folder ---------#
+for func in $__fish_config_dir/functions/my_functions/*.fish
+    source $func
+end
+
 
 #------- Environment variables ---------#
 
@@ -17,7 +22,6 @@ set -gx EDITOR nvim
 # use main editor for reading manpages
 set -gx MANPAGER "$EDITOR +Man!"
 set -gx MANWIDTH 999 
-
 
 # Set path for kb cli
 set -gx KB_PATH /home/evan/notes/knowledge-base
@@ -36,7 +40,7 @@ end
 bind \cn search_zk_notebooks 
 
 # Search and kill process
-# bind \ck _fzf_search_processes | xargs kill
+bind \ck _fzf_search_processes | xargs kill
 
 #------- Aliases ---------#
 alias nfz custom_fzf_search_dir
@@ -72,5 +76,4 @@ end
 # Created by `pipx` on 2023-03-17 16:47:03
 set PATH $PATH /Users/evan.godon/.local/bin
 
-
-alias assume="source /opt/homebrew/Cellar/granted/0.11.1/bin/assume.fish"
+alias assume="source (brew --prefix)/bin/assume.fish"

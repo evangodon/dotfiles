@@ -1,0 +1,9 @@
+function gts --description "Put system to sleep"
+  {{ if eq .chezmoi.os "linux" }}
+	  systemctl suspend $argv;
+  {{ else if eq .chezmoi.os "darwin" }}
+      pmset sleepnow
+  {{ else }}
+      echo "Unsupported OS: {{ .chezmoi.os }}"
+  {{ end }}
+end

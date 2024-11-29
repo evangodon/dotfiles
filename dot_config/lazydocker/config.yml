@@ -1,0 +1,7 @@
+gui:
+  border: "rounded" # one of 'rounded' | 'single' | 'double' | 'hidden'
+  theme:
+    selectedLineBgColor:
+      - reverse
+    optionsTextColor:
+      - blue

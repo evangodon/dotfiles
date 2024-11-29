@@ -1,5 +1,5 @@
-abbr -a -U -- ch chezmoi
-abbr -a -U -- j jrnl
-abbr -a -U -- p pnpm
-abbr -a -U -- q exit
-abbr -a -U -- zz exit
+abbr -a -- ch chezmoi
+abbr -a -- j jrnl
+abbr -a -- p pnpm
+abbr -a -- q exit
+abbr -a -- zz exit

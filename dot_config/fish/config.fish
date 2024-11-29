@@ -30,11 +30,13 @@ set -gx KB_PATH /home/evan/notes/knowledge-base
 # Use https://minsw.github.io/fzf-color-picker/
 source $__fish_config_dir/fzf.fish
 
+#------- Abbreviations ---------#
+source $__fish_config_dir/abbr.fish
 
 #------- Keybindings ---------#
 if command -v chezmoi >/dev/null 2>&1;
   set chezmoi_source (chezmoi source-path)
-  bind \ch "custom_fzf_search_dir --directory=$chezmoi_source"
+  bind \ch "cd $chezmoi_source && custom_fzf_search_dir --directory=$chezmoi_source && cd -"
 end
 
 bind \cn search_zk_notebooks 

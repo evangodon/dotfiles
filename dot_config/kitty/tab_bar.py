@@ -1,4 +1,8 @@
-from kitty.fast_data_types import Screen, get_options
+"""draw kitty tab"""
+# pyright: reportMissingImports=false
+# pylint: disable=E0401,C0116,C0103,W0603,R0913
+
+from kitty.fast_data_types import Screen, get_options, get_boss
 from kitty.utils import color_as_int
 from kitty.tab_bar import DrawData, ExtraData, TabBarData, draw_title, as_rgb
 
@@ -6,10 +10,10 @@ opts = get_options()
 
 # Dictionary of tab colors
 tab_colors = {
-    1: opts.color1, 
-    2: opts.color4,
-    3: opts.color2,
-    4: opts.color3,
+    1: opts.color9, 
+    2: opts.color12,
+    3: opts.color10,
+    4: opts.color13,
     5: opts.active_tab_background,
     6: opts.active_tab_background,
     7: opts.active_tab_background,
@@ -39,6 +43,9 @@ def to_sup(s):
 
     return ''.join(sups.get(char, char) for char in s)
 
+def get_active_tab_index() -> int:
+    return get_boss().active_tab_manager.active_tab_idx + 1
+
 def draw_tab(
     draw_data: DrawData, screen: Screen, tab: TabBarData,
     before: int, max_title_length: int, index: int, is_last: bool,
@@ -46,39 +53,52 @@ def draw_tab(
 ) -> int:
     orig_fg = screen.cursor.fg
     orig_bg = screen.cursor.bg
-    left_sep, right_sep = ('', '')
+    left_sep, right_sep = ('', '')
+    active_tab_idx = get_active_tab_index()
+    tabIsActive = index == active_tab_idx
+    nextTabIsActive = index + 1 == active_tab_idx
+    default_bg = as_rgb(int(draw_data.default_bg))
+    inactive_tab_bg = as_rgb(color_as_int(opts.inactive_tab_background))
 
-    custom_bg = as_rgb(color_as_int(tab_colors[index])) 
-    tab_bg = custom_bg if tab.is_active else orig_bg
+    custom_bg = as_rgb(color_as_int(opts.color9))
+    next_tab_custom_bg = as_rgb(color_as_int(opts.color9)) 
+    tab_bg = custom_bg if tabIsActive else orig_bg
 
-    def draw_sep(which: str) -> None:
-        screen.cursor.bg = draw_data.default_bg
-        screen.cursor.fg = orig_bg
-        screen.draw(which)
-        screen.cursor.bg = orig_bg
-        screen.cursor.fg = orig_fg
+
+    def draw_sep() -> None:
+        if is_last:
+            separator_bg = default_bg
+        elif nextTabIsActive:
+            separator_bg = next_tab_custom_bg
+        else:
+            separator_bg = inactive_tab_bg
+
+        if tabIsActive:
+           separator_fg = custom_bg
+        elif not nextTabIsActive:
+           separator_fg = custom_bg
+        else:
+           separator_fg = inactive_tab_bg
+
+        screen.cursor.bg = separator_bg
+        screen.cursor.fg = separator_fg
+
+        separator_char = '' if tabIsActive or nextTabIsActive or is_last else "╱"
+        screen.draw(separator_char) if not is_last else None
+
 
     if max_title_length <= 1:
         screen.draw('…')
     elif max_title_length == 2:
         screen.draw('…|')
     else:
-        draw_sep(left_sep)
         screen.draw('')
         screen.cursor.bg = tab_bg
         draw_title(draw_data, screen, tab, index)
         map_indicator = mappings.get(index, to_sup(str(index)))
         screen.draw(f'{map_indicator} ')
-        # extra = screen.cursor.x - before - max_title_length
-        # if extra >= 0:
-        #     screen.cursor.x -= extra + 3
-        #     screen.draw('…')
-        # elif extra == -1:
-        #     screen.cursor.x -= 2
-        #     screen.draw('…')
-        screen.draw('')
-        draw_sep(right_sep)
-        draw_sep(' ')
+        draw_sep()
         screen.cursor.bg = orig_bg
+        screen.cursor.fg = orig_fg
 
     return screen.cursor.x

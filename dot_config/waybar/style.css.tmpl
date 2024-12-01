@@ -3,7 +3,7 @@
 * {
 	border: none;
 	border-radius: 10px;
-  font-family: {{ .theme.font_family }}
+  font-family: {{ .theme.font_family }};
 	font-size: 16px;
 	min-height: 10px;
 }
@@ -201,4 +201,14 @@ window#waybar.hidden {
 	transition: none;
 	color: @base;
 	background: #F2CDCD;
+}
+
+#workspaces button {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#workspaces button.focused {
+  background-color: #00aaff;
+  color: #ffffff;
 }

@@ -80,12 +80,21 @@
   },
   "custom/power": {
     "format": " ",
-    "on-click": "bash ~/.config/rofi/scripts/powermenu_t6",
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh",
   },
   "custom/updates": {
     "format": "{} Update(s)",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
     "interval": 15,
+  },
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}",
+    "format-focused": "{name}",
+    "format-unfocused": "{name}",
+    "format-visible": "{name}",
+    "format-urgent": "{name}",
+    "icon": false,
   },
 }

@@ -4,7 +4,7 @@
 
 ### Rofi
 
-- [ ] Delete unused files
+- [ ] Change powermenu
 
 ### waybar
 
@@ -29,3 +29,4 @@
 - [x] Move chezmoi scripts to normal scripts
 - [x] Configure waybar
 - [x] the fzfsearch for chezmoi files doesn't check dotfiles
+- [x] Delete unused files

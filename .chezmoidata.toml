@@ -1,5 +1,5 @@
-gitname = ""
-gitmail = ""
+gitname = "evangodon"
+gitmail = "e.godon@outlook.com"
 
 [theme]
 rosewater = "#F5E0DC"
@@ -16,6 +16,7 @@ sky = "#89DCEB"
 sapphire = "#74C7EC"
 blue = "#89B4FA"
 lavender = "#B4BEFE"
+white = "#ffffff"
 
 # Text
 text = "#CDD6F4"

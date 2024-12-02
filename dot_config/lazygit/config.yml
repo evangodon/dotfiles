@@ -1,7 +1,7 @@
 gui:
   theme:
     selectedLineBgColor:
-      - black
+      - "#2D2B40"
   showFileTree: true
   nerdFontsVersion: "3"
   showCommandLog: true

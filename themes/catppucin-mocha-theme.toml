@@ -1,14 +1,9 @@
-gitname = "evangodon"
-gitmail = "e.godon@outlook.com"
-
-font_family = "JetbrainsMono Nerd Font"
-
 [theme]
 rosewater = "#F5E0DC"
 flamingo = "#F2CDCD"
 pink = "#F5C2E7"
 mauve = "#CBA6F7"
-red = "#F02E6E"
+red = "#F38BA8"
 maroon = "#EBA0AC"
 peach = "#FAB387"
 yellow = "#F9E2AF"
@@ -18,7 +13,6 @@ sky = "#89DCEB"
 sapphire = "#74C7EC"
 blue = "#89B4FA"
 lavender = "#B4BEFE"
-white = "#ffffff"
 
 # Text
 text = "#CDD6F4"

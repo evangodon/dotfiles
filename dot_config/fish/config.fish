@@ -40,6 +40,7 @@ if command -v chezmoi >/dev/null 2>&1;
 end
 
 bind \cn search_zk_notebooks 
+bind \co "nvim ." 
 
 
 #------- Aliases ---------#

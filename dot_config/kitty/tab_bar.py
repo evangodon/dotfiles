@@ -95,7 +95,7 @@ def draw_tab(
         elif next_tab_is_active:
             separator_fg = inactive_tab_bg
         else:
-            separator_fg = active_tab_bg
+            separator_fg = inactive_tab_fg
 
         screen.cursor.bg = separator_bg
         screen.cursor.fg = separator_fg

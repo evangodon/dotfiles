@@ -1,0 +1,21 @@
+[preview]
+max_width = 1980
+
+
+[opener]
+shotwell = [
+  { run = 'shotwell "$@"', orphan = true, for = "unix", desc = "Open image in shotwell" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open",  for = "unix" },
+]
+neovim = [
+	{ run = 'nvim "$@"', orphan = true, block =true, desc = "Open in neovim", for = "unix" },
+]
+
+[open]
+append_rules = [ ]
+rules = [
+	{ name = "*.jpg", use = "shotwell" },
+	{ mime = "text/*", use = "neovim" },
+]

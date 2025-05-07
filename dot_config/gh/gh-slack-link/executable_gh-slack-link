@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -e
+
+CUSTOM_TITLE=""
+
+while getopts "t:" opt; do
+  case ${opt} in
+    t )
+      CUSTOM_TITLE="$OPTARG"
+      ;;
+    \? )
+      echo "Usage: cmd [-t custom_title]"
+      exit 1
+      ;;
+  esac
+done
+
+
+TEMPLATE=$(cat <<EOF
+:gh-logo:{{ if "$CUSTOM_TITLE" }}{{ "$CUSTOM_TITLE" }}{{ else }}{{ .title }}{{ end }}
+:external-link-lucide:{{.url}} 
+:files-changed:{{ .changedFiles }}:git-diff-added:{{ .additions }}:git-diff-removed:{{ .deletions }}
+EOF
+)
+
+JSON_FIELDS="additions,changedFiles,deletions,title,url"
+
+echo "Fetching PR data..."
+pr_link=$(gh pr view --json "$JSON_FIELDS" --template "$TEMPLATE")
+
+
+echo "$pr_link" | pbcopy 
+
+echo "Copied formatted message to clipboard "

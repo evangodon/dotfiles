@@ -80,7 +80,7 @@ space_styles() {
   echo "${styles[@]}"
 }
 
-SPACE_ICONS=("" "󰊯" "󰒱" "󰃭" "󰝚")
+SPACE_ICONS=("" "󰊯" "󰒱" "󰃭" "󰝚" "󰥶")
 
 
 ##### Adding Left Items #####

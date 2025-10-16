@@ -4,6 +4,11 @@ if type -q starship
   starship init fish | source
 end
 
+#------- Mise (Package Manager) ---------#
+if type -q mise
+  mise activate fish | source
+end
+
 #------- Greeting ---------#
 set fish_greeting  # remove fish default greeting
 

@@ -18,7 +18,6 @@ end
 
 # Set default editor
 set -gx EDITOR nvim
-
 # use main editor for reading manpages
 set -gx MANPAGER "$EDITOR +Man!"
 set -gx MANWIDTH 999 

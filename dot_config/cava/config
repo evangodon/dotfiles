@@ -27,8 +27,13 @@ framerate = 60
 monstercat = 1
 waves = 0
 
+[]
+
 [color]
-gradient = 1
+
+foreground = '#F02E6E'
+
+gradient = 0
 gradient_count = 8
 gradient_color_8 = '#e78284'
 gradient_color_7 = '#eba0ac'

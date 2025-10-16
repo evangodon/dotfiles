@@ -2,3 +2,5 @@ keymap_procs: # keymap when process list is focused
   <l>: { c: toggle-focus }
 keymap_term: # keymap when terminal is focused
   <h>: { c: toggle-focus }
+
+hide_keymap_window: true

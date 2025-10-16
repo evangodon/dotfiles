@@ -27,7 +27,6 @@ $git_status\
 $hg_branch\
 $pijul_channel\
 $docker_context\
-$package\
 $c\
 $cmake\
 $cobol\
@@ -173,7 +172,7 @@ symbol = "[△](bold italic bright-red)"
 style = "italic bright-red"
 truncation_symbol = "⋯"
 truncation_length = 25
-ignore_branches = ["main", "master"]
+#ignore_branches = ["main", "master"]
 only_attached = true
 
 [git_metrics]

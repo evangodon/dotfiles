@@ -1,0 +1,15 @@
+[tools]
+bat = "latest"
+bpytop = "latest"
+fd = "latest"
+fzf = "latest"
+jq = "latest"
+lazydocker = "latest"
+lazygit = "latest"
+neovim = "latest"
+ripgrep = "latest"
+starship = "latest"
+stylua = "latest"
+
+[env]
+_.file = ".env"

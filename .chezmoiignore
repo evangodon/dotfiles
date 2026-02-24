@@ -4,3 +4,6 @@ themes/
 scripts/
 wiki/
 raycast/
+**/*.db
+**/*.db-wal
+**/*.db-shm

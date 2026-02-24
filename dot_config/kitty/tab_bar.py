@@ -79,17 +79,17 @@ def draw_tab(
     default_bg = as_rgb(color_as_int(draw_data.default_bg))
 
     def draw_sep() -> None:
-        if is_last and tab_is_active:
-            separator_bg = active_tab_bg
-        elif is_last:
-            separator_bg = inactive_tab_bg
+        if is_last:
+            separator_bg = default_bg
         elif next_tab_is_active:
             separator_bg = active_tab_bg
         else:
             separator_bg = inactive_tab_bg
 
-        if is_last:
-            separator_fg = default_bg
+        if is_last and tab_is_active:
+            separator_fg = active_tab_bg
+        elif is_last:
+            separator_fg = inactive_tab_bg
         elif tab_is_active:
             separator_fg = active_tab_bg
         elif next_tab_is_active:
@@ -101,7 +101,7 @@ def draw_tab(
         screen.cursor.fg = separator_fg
 
         separator_char = "" if tab_is_active or next_tab_is_active or is_last else "╱"
-        screen.draw(separator_char) if not is_last else screen.draw("")
+        screen.draw(separator_char) if not is_last else screen.draw("")
 
     if max_title_length <= 1:
         screen.draw("…")
